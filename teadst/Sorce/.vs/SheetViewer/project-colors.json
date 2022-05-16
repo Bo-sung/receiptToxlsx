@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "90a165b8-15cb-4214-bf7a-81a18439b64f": {
+      "ProjectGuid": "90a165b8-15cb-4214-bf7a-81a18439b64f",
+      "DisplayName": "MailMaker",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}

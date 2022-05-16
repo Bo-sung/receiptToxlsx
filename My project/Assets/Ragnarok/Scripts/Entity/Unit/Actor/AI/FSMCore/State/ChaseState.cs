@@ -1,0 +1,201 @@
+﻿using UnityEngine;
+
+namespace Ragnarok.AI
+{
+    /// <summary>
+    /// 추격
+    /// </summary>
+    public class ChaseState : UnitFsmState
+    {
+        private const float CHECK_SKILL_TIME = 1f;
+
+        /// <summary>
+        /// 이동 가능 여부
+        /// </summary>
+        bool canMove;
+
+        /// <summary>
+        /// 스킬 체크 시간 (버프)
+        /// </summary>
+        private float checkBuffSkillTime;
+
+        /// <summary>
+        /// 스킬 체크 시간 (액티브)
+        /// </summary>
+        private float checkActiveSkillTime;
+
+        public ChaseState(UnitActor actor, StateID id) : base(actor, id)
+        {
+        }
+
+        public override void Begin()
+        {
+            base.Begin();
+
+            canMove = actor.Animator.CanPlayRun();
+
+            if (!canMove)
+                actor.Animator.PlayIdle();
+        }
+
+        public override void End()
+        {
+            base.End();
+
+            checkBuffSkillTime = 0f;
+            checkActiveSkillTime = 0f;
+        }
+
+        public override void Update()
+        {
+            base.Update();
+
+            if (actor.AI.IsPause)
+            {
+                actor.Movement.Stop();
+                return;
+            }
+
+            // 외부 스킬 입력 존재
+            if (ProcessInputSkill())
+                return;
+
+            // 외부 이동 입력 존재
+            if (canMove && ProcessInputMove())
+                return;
+
+            // 회복 스킬 사용
+            if (UseRecoverySkill(actor))
+                return;
+
+            if (actor.Entity is MonsterEntity monsterEntity && monsterEntity.Monster.CanBeAngry && !monsterEntity.IsAngry)
+            {
+                float rate = monsterEntity.CurHP / (float)monsterEntity.MaxHP;
+                if (rate < monsterEntity.Monster.AngryHPRate)
+                {
+                    actor.AI.ChangeState(Transition.BeAngry);
+                    return;
+                }
+            }
+
+            // 타겟이 사라지거나 죽었을 경우
+            UnitActor target = actor.AI.Target;
+            if (target == null || target.Entity.IsDie || target.IsPooled)
+            {
+                actor.AI.ResetTarget(); // 타겟 초기화
+                actor.AI.ChangeState(Transition.LostTarget); // 타겟 놓침
+                return;
+            }
+
+            //// 바인딩 타겟 변경 확인
+            //if (ProcessChangeBindingTarget(actor))
+            //    return;
+
+            if (actor.Entity.battleCrowdControlInfo.GetCannotUseSkill())
+            {
+                // 스킬 사용 불가
+            }
+            else
+            {
+                // 버프 스킬 사용
+                if (UseBuffSkill(actor))
+                    return;
+
+                // 쫒던 타겟에게 스킬 사용
+                if (UseActiveSkill(actor, target))
+                    return;
+            }
+
+            if (actor.Entity.battleCrowdControlInfo.GetCannotUseBasicAttack())
+            {
+                // 평타 사용 불가
+            }
+            else
+            {
+                // 쫓던 타겟에데 평타 스킬 사용
+                if (UseBasicActiveSkill(actor, target))
+                    return;
+            }
+
+            // 이동 불가
+            if (!canMove)
+            {
+
+            }
+            else if (actor.Entity.battleCrowdControlInfo.GetCannotMove())
+            {
+                // 이동 불가
+            }
+            else
+            {
+                // 타겟을 향해 이동
+                actor.Movement.SetDestination(target.Entity.LastPosition);
+            }
+        }
+
+        /// <summary>
+        /// 버프 스킬 사용
+        /// </summary>
+        private bool UseBuffSkill(UnitActor actor)
+        {
+            if (!actor.AI.isAutoChangeState)
+                return false;
+
+            // 버프 스킬 사용 시간 체크 (1초당)
+            if (checkBuffSkillTime > Time.realtimeSinceStartup)
+                return false;
+
+            checkBuffSkillTime = Time.realtimeSinceStartup + CHECK_SKILL_TIME;
+
+            TargetUnit targetUnit = FindTargetUnit(ActiveSkill.Type.Buff);
+
+            if (targetUnit.IsInvalid())
+                return false;
+
+            if (actor.AI.CheckMpCost(targetUnit.selectedSkill))
+                return false;
+
+            actor.AI.UseSkill(targetUnit.target, targetUnit.selectedSkill);
+            return true;
+        }
+
+        /// <summary>
+        /// 타겟에게 사용 가능한 스킬 선택
+        /// </summary>
+        private bool UseActiveSkill(UnitActor actor, UnitActor target)
+        {
+            if (!actor.AI.isAutoChangeState)
+                return false;
+
+            if (checkActiveSkillTime > Time.realtimeSinceStartup)
+                return false;
+
+            checkActiveSkillTime = Time.realtimeSinceStartup + CHECK_SKILL_TIME;
+
+            TargetUnit targetUnit = FindTargetUnit(target, ActiveSkill.Type.Attack);
+
+            if (targetUnit.IsInvalid())
+                return false;
+
+            if (actor.AI.CheckMpCost(targetUnit.selectedSkill))
+                return false;
+
+            actor.AI.UseSkill(targetUnit.target, targetUnit.selectedSkill);
+            return true;
+        }
+
+        /// <summary>
+        /// 타겟에게 평타 스킬 선택
+        /// </summary>
+        private bool UseBasicActiveSkill(UnitActor actor, UnitActor target)
+        {
+            TargetUnit targetUnit = FindBasicActiveSkillTarget(target);
+
+            if (targetUnit.IsInvalid())
+                return false;
+
+            actor.AI.UseSkill(targetUnit.target, targetUnit.selectedSkill);
+            return true;
+        }
+    }
+}

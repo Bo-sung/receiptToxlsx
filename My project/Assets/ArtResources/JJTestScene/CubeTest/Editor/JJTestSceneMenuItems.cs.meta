@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+<<<<<<< HEAD
+guid: 5e4f2e1f0fb49844d9b126d65c764012
+=======
+guid: 67031115c3859c9409a9998476abd7db
+>>>>>>> feature/CubeRotationTest
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

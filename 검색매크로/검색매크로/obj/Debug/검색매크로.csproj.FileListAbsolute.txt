@@ -1,0 +1,16 @@
+C:\Users\solid9\source\repos\검색매크로\검색매크로\bin\Debug\검색매크로.exe.config
+C:\Users\solid9\source\repos\검색매크로\검색매크로\bin\Debug\검색매크로.exe
+C:\Users\solid9\source\repos\검색매크로\검색매크로\bin\Debug\검색매크로.pdb
+C:\Users\solid9\source\repos\검색매크로\검색매크로\obj\Debug\검색매크로.csproj.AssemblyReference.cache
+C:\Users\solid9\source\repos\검색매크로\검색매크로\obj\Debug\검색매크로.csproj.SuggestedBindingRedirects.cache
+C:\Users\solid9\source\repos\검색매크로\검색매크로\obj\Debug\MainWindow.g.cs
+C:\Users\solid9\source\repos\검색매크로\검색매크로\obj\Debug\App.g.cs
+C:\Users\solid9\source\repos\검색매크로\검색매크로\obj\Debug\검색매크로_MarkupCompile.cache
+C:\Users\solid9\source\repos\검색매크로\검색매크로\obj\Debug\검색매크로_MarkupCompile.lref
+C:\Users\solid9\source\repos\검색매크로\검색매크로\obj\Debug\MainWindow.baml
+C:\Users\solid9\source\repos\검색매크로\검색매크로\obj\Debug\검색매크로.g.resources
+C:\Users\solid9\source\repos\검색매크로\검색매크로\obj\Debug\검색매크로.Properties.Resources.resources
+C:\Users\solid9\source\repos\검색매크로\검색매크로\obj\Debug\검색매크로.csproj.GenerateResource.cache
+C:\Users\solid9\source\repos\검색매크로\검색매크로\obj\Debug\검색매크로.csproj.CoreCompileInputs.cache
+C:\Users\solid9\source\repos\검색매크로\검색매크로\obj\Debug\검색매크로.exe
+C:\Users\solid9\source\repos\검색매크로\검색매크로\obj\Debug\검색매크로.pdb
