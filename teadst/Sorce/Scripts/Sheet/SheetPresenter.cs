@@ -1,45 +1,9 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace SheetViewer
 {
-    public class aabConverterPresenter : ViewPresenter
-    {
-        AabConvertor _aabConvertor;
-        public override void AddEvent()
-        {
-
-        }
-        public override void RemoveEvent()
-        {
-
-        }
-        public aabConverterPresenter()
-        {
-            _aabConvertor = AabConvertor.GetInstance();
-        }
-
-        public System.Diagnostics.DataReceivedEventHandler OnPrintConsolOutput;
-        public EventHandler OnConvertFinished;
-        public void Convert(String Droped_path)
-        {
-            _aabConvertor.Initiallize("BundleTools");
-            _aabConvertor.SetConvertFile(Droped_path);
-            _aabConvertor.ConvertProcessStart(
-                new System.Diagnostics.DataReceivedEventHandler(PrintConsolOutput) + OnPrintConsolOutput,
-                new EventHandler(ConverterFinished) + OnConvertFinished
-                );
-        }
-        public void PrintConsolOutput(object sender, System.Diagnostics.DataReceivedEventArgs e)
-        {
-
-        }
-        public void ConverterFinished(object sender, EventArgs e)
-        {
-
-        }
-    }
-
-    public class SheetPresenter : ViewPresenter
+    public class SheetToMailPresenter : ViewPresenter
     {
         private SheetModel _sheetmodel;
         private MailConvertModel mailconvertmodel;
@@ -51,7 +15,7 @@ namespace SheetViewer
         {
 
         }
-        public SheetPresenter(SheetModel sheetModel)
+        public SheetToMailPresenter(SheetModel sheetModel)
         {
             _sheetmodel = sheetModel;
             mailconvertmodel = new MailConvertModel();
@@ -115,4 +79,34 @@ namespace SheetViewer
         }
 
     }
+    public class AutoBanSheetPresenter : IViewPresenter
+    {
+        private SheetModel _sheetmodel;
+        public void AddEvent()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void RemoveEvent()
+        {
+            throw new NotImplementedException();
+        }
+
+        public AutoBanSheetPresenter(SheetModel sheetModel)
+        {
+            _sheetmodel = sheetModel;
+        }
+
+        public List<VersionSheet.Layout> GetSheetLayoutList()
+        {
+            return _sheetmodel.GetVerSheetList();
+        }
+
+        public (List<TestSheet.Layout>,List<string>) GetTestSheetLayoutList()
+        {
+            return _sheetmodel.GetTestSheets();
+        }
+        
+    }
+
 }

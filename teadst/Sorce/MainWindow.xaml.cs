@@ -19,7 +19,7 @@ namespace SheetViewer
 
             //Sheet System Start
             
-            Uri url = new Uri("SheetViewPage.xaml", UriKind.Relative);
+            Uri url = new Uri("AutoBan.xaml", UriKind.Relative);
             frame.Navigate(url);
         }
         private void SheetModBtn_Click(object sender, RoutedEventArgs e)

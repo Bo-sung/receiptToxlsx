@@ -16,14 +16,14 @@ namespace SheetViewer
     /// </summary>
     public partial class SheetViewPage : Page
     {
-        SheetPresenter presenter;
+        SheetToMailPresenter presenter;
         String printedText;
         string ContentsInputBox_DefalutText;// = "추가로 입력할 내용은 여기에 기입.   줄 시작시 스페이스바로 내어쓰기 사용 가능.  !버전 입력시 현재 버전 자동 기입 ex)현재 버전 42.2422.2일떄 !버전 -&gt; 42.2422. !버전1 -&gt; 42.2422.1";
 
         public SheetViewPage()
         {
             //시트 모델 로드
-            presenter = new SheetPresenter
+            presenter = new SheetToMailPresenter
                 (
                 new SheetModel
                 (

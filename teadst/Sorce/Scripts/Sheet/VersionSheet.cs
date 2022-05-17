@@ -19,39 +19,39 @@ namespace SheetViewer
             /// <summary>
             /// 날짜
             /// </summary>
-            public string Date;
+            public string Date { get; set; }
             /// <summary>
             /// 플랫폼
             /// </summary>
-            public string Platform;
+            public string Platform { get; set; }
             /// <summary>
             /// 번들 버전
             /// </summary>
-            public string BundleVer;
+            public string BundleVer { get; set; }
             /// <summary>
             /// 버전 코드
             /// </summary>
-            public string Vercode;
+            public string Vercode { get; set; }
             /// <summary>
             /// 서버
             /// </summary>
-            public string Server;
+            public string Server { get; set; }
             /// <summary>
             /// 지역
             /// </summary>
-            public string Locale;
+            public string Locale { get; set; }
             /// <summary>
             /// 비고
             /// </summary>
-            public string State;
+            public string State { get; set; }
             /// <summary>
             /// 다운로드 링크
             /// </summary>
-            public string DownloadLink;
+            public string DownloadLink { get; set; }
             /// <summary>
             /// 앱 이름
             /// </summary>
-            public string AppName;
+            public string AppName { get; set; }
             public String MakeString()
             {
                 String str = Date + "   " +

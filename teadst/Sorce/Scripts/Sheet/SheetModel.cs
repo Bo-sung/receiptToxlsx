@@ -55,6 +55,18 @@ namespace SheetViewer
             return new VersionSheet(sheet);
         }
 
+        public List<VersionSheet.Layout> GetVerSheetList()
+        {
+            IList<IList<object>> sheet = GetSheet();
+            return new VersionSheet(sheet).Data;
+        }
+
+        public (List<TestSheet.Layout>, List<string>) GetTestSheets()
+        {
+            IList<IList<object>> sheet = GetSheet();
+            return new TestSheet(sheet).GetLayouWithHeads();
+        }
+
         /// <summary>
         /// 직전에 사용한 버전
         /// </summary>
