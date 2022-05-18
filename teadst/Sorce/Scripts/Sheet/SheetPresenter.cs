@@ -199,13 +199,13 @@ namespace SheetViewer
                     process = new PasteProcess(_pid++, "", prevMousePos, ProcessType.Paste);
                     break;
                 case ProcessType.InputValue:
-                    process = new InputProcess(_pid++, "", prevMousePos, ProcessType.InputValue);
+                    process = new InputProcess(_pid++, "", prevMousePos, ProcessType.InputValue, this);
                     break;
                 case ProcessType.InputFromChart:
-                    process = new InputProcess(_pid++, "", prevMousePos, ProcessType.InputFromChart);
+                    process = new InputProcess(_pid++, "", prevMousePos, ProcessType.InputFromChart, this);
                     break;
                 case ProcessType.InputFromChartOne:
-                    process = new InputProcess(_pid++, "", prevMousePos, ProcessType.InputFromChartOne);
+                    process = new InputProcess(_pid++, "", prevMousePos, ProcessType.InputFromChartOne, this);
                     break;
                 case ProcessType.SelectAll:
                     process = new SelectProcess(_pid++, "", prevMousePos, ProcessType.SelectAll);
@@ -325,6 +325,23 @@ namespace SheetViewer
             processList.RemoveAt(processList.Count - 1);
             ProcessBlockList.RemoveAt(ProcessBlockList.Count - 1);
             _processPanel.Children.RemoveAt(_processPanel.Children.Count - 1);
+        }
+
+        public string GetSheetData(int row, int col)
+        {
+            //시트 데이터 받기
+            return _generalSheet.Item1[col].GetRowData(row);
+        }
+
+        public List<string> GetSheetData(string head)
+        {
+            for (int i = 0; i < _generalSheet.Item2.Count; ++i)
+            {
+                if (_generalSheet.Item2.Equals(head))
+                {
+                    //시트 범위 세로값 받기
+                }
+            }
         }
     }
 

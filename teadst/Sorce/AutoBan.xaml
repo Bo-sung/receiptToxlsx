@@ -74,7 +74,7 @@
             <Button x:Name="FindBtn" Content="Find" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Click="FindBtn_Click" Grid.Column="2"/>
 
         </Grid>
-        <DataGrid Name="ExcelDataGrid" Grid.Row="2" ItemsSource="{Binding}">
+        <DataGrid Name="ExcelDataGrid" Grid.Row="3" ItemsSource="{Binding}">
         </DataGrid>
     </Grid>
 </Page>

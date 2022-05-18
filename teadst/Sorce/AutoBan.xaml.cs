@@ -46,19 +46,16 @@ namespace MailMaker
 
         private void FindBtn_Click(object sender, RoutedEventArgs e)
         {
-            if (presenter == null)
-            {
-                //시트 모델 로드
-                presenter.ModelImport
+            //시트 모델 로드
+            presenter.ModelImport
+            (
+                new SheetModel
                 (
-                    new SheetModel
-                    (
-                        GoogleConnectionMannager.GetInstance().ActivatedManager,
-                        "1jLZ3UmfGTPzjSUSpCtJu1Y6jPLqHQtZc1cWOgVXf91U",
-                        FilePathInputBox.Text
-                    )
-                );
-            }
+                    GoogleConnectionMannager.GetInstance().ActivatedManager,
+                    "1jLZ3UmfGTPzjSUSpCtJu1Y6jPLqHQtZc1cWOgVXf91U",
+                    FilePathInputBox.Text
+                )
+            );
             (List<GeneralSheet.Layout> sheets, List<String> heads) = presenter.GeneralSheetLayoutList();
             ObservableCollection<GeneralSheet.Layout> dump = new ObservableCollection<GeneralSheet.Layout>(sheets);
             ExcelDataGrid.DataContext = dump;

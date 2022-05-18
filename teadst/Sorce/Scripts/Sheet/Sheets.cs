@@ -32,6 +32,34 @@ namespace SheetViewer
             public string Row_R { get; set; }
             public string Row_S { get; set; }
             public string Row_T { get; set; }
+
+            public string GetRowData(int index)
+            {
+                switch (index)
+                {
+                    case 0:     return Row_A;
+                    case 1:     return Row_B;
+                    case 2:     return Row_C;
+                    case 3:     return Row_D;
+                    case 4:     return Row_E;
+                    case 5:     return Row_F;
+                    case 6:     return Row_G;
+                    case 7:     return Row_H;
+                    case 8:     return Row_I;
+                    case 9:     return Row_J;
+                    case 10:    return Row_K;
+                    case 11:    return Row_L;
+                    case 12:    return Row_M;
+                    case 13:    return Row_N;
+                    case 14:    return Row_O;
+                    case 15:    return Row_P;
+                    case 16:    return Row_Q;
+                    case 17:    return Row_R;
+                    case 18:    return Row_S;
+                    case 19:    return Row_T;
+                }
+                return "";
+            }
         }
 
         public List<Layout> Layouts { get; set; }

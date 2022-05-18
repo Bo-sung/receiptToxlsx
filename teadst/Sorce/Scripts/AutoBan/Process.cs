@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using SheetViewer;
 
 namespace MailMaker.Scripts.AutoBan
 {
@@ -124,7 +125,7 @@ namespace MailMaker.Scripts.AutoBan
         public System.Action ProcessProgress { get; set; }
         public System.Action ProcessDone { get; set; }
 
-        public InputProcess(int pid, string value, Position mousePosition, ProcessType processType)
+        public InputProcess(int pid, string value, Position mousePosition, ProcessType processType, AutoBanSheetPresenter presenter)
         {
             PID = pid;
             this.Value = value;
