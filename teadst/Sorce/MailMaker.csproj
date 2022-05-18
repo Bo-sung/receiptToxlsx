@@ -119,10 +119,14 @@
       <DependentUpon>AutoBan.xaml</DependentUpon>
     </Compile>
     <Compile Include="Scripts\aabConvertor\aabConverter.cs" />
+    <Compile Include="Scripts\AutoBan\IProcess.cs" />
+    <Compile Include="Scripts\AutoBan\Process.cs" />
     <Compile Include="Scripts\Google\GoogleConnectionManager.cs" />
     <Compile Include="Scripts\Google\GoogleMailApi\GoogleGmailManager.cs" />
     <Compile Include="Scripts\Google\GoogleSheetApi\GoogleSheetLayout.cs" />
     <Compile Include="Scripts\Google\GoogleSheetApi\GoogleSheetManager.cs" />
+    <Compile Include="Scripts\MouseKeyboardController.cs" />
+    <Compile Include="Scripts\ProcessBlock.cs" />
     <Compile Include="Scripts\Sheet\BaseModel.cs" />
     <Compile Include="Scripts\Sheet\SheetPresenter.cs" />
     <Compile Include="Scripts\Sheet\Sheets.cs" />

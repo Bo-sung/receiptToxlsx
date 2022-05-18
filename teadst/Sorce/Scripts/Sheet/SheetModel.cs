@@ -61,10 +61,10 @@ namespace SheetViewer
             return new VersionSheet(sheet).Data;
         }
 
-        public (List<TestSheet.Layout>, List<string>) GetTestSheets()
+        public (List<GeneralSheet.Layout>, List<string>) GetGeneralSheet()
         {
             IList<IList<object>> sheet = GetSheet();
-            return new TestSheet(sheet).GetLayouWithHeads();
+            return new GeneralSheet(sheet).GetLayouWithHeads();
         }
 
         /// <summary>
