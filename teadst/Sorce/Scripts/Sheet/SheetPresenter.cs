@@ -110,6 +110,7 @@ namespace SheetViewer
     {
         private SheetModel _sheetmodel;
         private (List<GeneralSheet.Layout>, List<string>) _generalSheet;
+        GeneralSheet generalSheet;
         public List<ProcessBlock> ProcessBlockList { get; set; }
         public List<IProcess> processList;
         int _pid;
@@ -118,6 +119,14 @@ namespace SheetViewer
         bool isPlaying;
         bool isRepeatMode;
         private StackPanel _processPanel;
+
+        private int nextIndex = -1;
+
+        //호출시 마다 1씩 증가됨
+        public int GetNextIndex()
+        {
+            return ++nextIndex;
+        }
 
         public void AddEvent()
         {
@@ -158,7 +167,8 @@ namespace SheetViewer
         {
             if (_isModelEnabled)
             {
-                _generalSheet = _sheetmodel.GetGeneralSheet();
+                generalSheet = _sheetmodel.GetGeneralSheet();
+                _generalSheet = (generalSheet.Layouts, generalSheet.Heads);
                 return _generalSheet;
             }
             else
@@ -293,11 +303,10 @@ namespace SheetViewer
             }
 
             if (processList.Count != 0)
-                processList[0].Start();
-
-            //프로세스 리스트는 남아있더라도 프로세스 블록 리스트는 없을수 있음(LastProcess)
-            if (ProcessBlockList.Count != 0)
+            {
                 ProcessBlockList[0].ChangeColor(ProcessBlock.State.Processing);
+                processList[0].Start();
+            }
         }
 
 
@@ -332,15 +341,25 @@ namespace SheetViewer
             //시트 데이터 받기
             return _generalSheet.Item1[col].GetRowData(row);
         }
-
-        public List<string> GetSheetData(string head)
+        public string GetSheetData(string head, int index, bool IsRow = false)
         {
-            for (int i = 0; i < _generalSheet.Item2.Count; ++i)
+            if (IsRow)
+                return generalSheet.GetRow(head)[index];
+
+            //시트 데이터 받기
+            return generalSheet.GetCol(head)[index];
+        }
+
+        public List<string> GetSheetDatas(string head)
+        {
+            int index = generalSheet.Heads.IndexOf(head);
+            if (index != -1)
             {
-                if (_generalSheet.Item2.Equals(head))
-                {
-                    //시트 범위 세로값 받기
-                }
+                return generalSheet.GetRow(head).ToList<string>();
+            }
+            else
+            {
+                return null;
             }
         }
     }

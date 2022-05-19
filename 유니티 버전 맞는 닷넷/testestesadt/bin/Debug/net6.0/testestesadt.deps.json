@@ -1,0 +1,41 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "testestesadt/1.0.0": {
+        "dependencies": {
+          "NTextCat": "0.3.65"
+        },
+        "runtime": {
+          "testestesadt.dll": {}
+        }
+      },
+      "NTextCat/0.3.65": {
+        "runtime": {
+          "lib/netstandard2.0/NTextCat.dll": {
+            "assemblyVersion": "0.3.65.0",
+            "fileVersion": "0.3.65.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "testestesadt/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "NTextCat/0.3.65": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-Yc2mJwJJPf5rEmzadOPFWmsejuHbCIqKwmarrwibNT6MhySs3COKZ1dEL7Z+UzsiQ7pO2RWhpvatilxB+l4DaQ==",
+      "path": "ntextcat/0.3.65",
+      "hashPath": "ntextcat.0.3.65.nupkg.sha512"
+    }
+  }
+}

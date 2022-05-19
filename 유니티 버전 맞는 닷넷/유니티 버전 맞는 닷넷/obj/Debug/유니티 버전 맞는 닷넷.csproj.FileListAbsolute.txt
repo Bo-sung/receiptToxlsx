@@ -1,0 +1,6 @@
+C:\Users\solid9\source\repos\유니티 버전 맞는 닷넷\유니티 버전 맞는 닷넷\bin\Debug\유니티 버전 맞는 닷넷.dll
+C:\Users\solid9\source\repos\유니티 버전 맞는 닷넷\유니티 버전 맞는 닷넷\bin\Debug\유니티 버전 맞는 닷넷.pdb
+C:\Users\solid9\source\repos\유니티 버전 맞는 닷넷\유니티 버전 맞는 닷넷\obj\Debug\유니티 버전 맞는 닷넷.csproj.AssemblyReference.cache
+C:\Users\solid9\source\repos\유니티 버전 맞는 닷넷\유니티 버전 맞는 닷넷\obj\Debug\유니티 버전 맞는 닷넷.csproj.CoreCompileInputs.cache
+C:\Users\solid9\source\repos\유니티 버전 맞는 닷넷\유니티 버전 맞는 닷넷\obj\Debug\유니티 버전 맞는 닷넷.dll
+C:\Users\solid9\source\repos\유니티 버전 맞는 닷넷\유니티 버전 맞는 닷넷\obj\Debug\유니티 버전 맞는 닷넷.pdb

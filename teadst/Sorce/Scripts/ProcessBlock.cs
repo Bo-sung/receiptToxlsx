@@ -36,6 +36,7 @@ namespace MailMaker.Scripts.AutoBan
         public TextBlock positionText;
         public System.Windows.Controls.TextBox valueInput;
         public TextBlock PIDBlock;
+        public TextBlock ETCBlock;
 
         public enum BackgroundColor
         {
@@ -111,10 +112,19 @@ namespace MailMaker.Scripts.AutoBan
                 HorizontalAlignment = System.Windows.HorizontalAlignment.Center,
             };
 
+            ETCBlock = new TextBlock
+            {
+                Text = "",
+                VerticalAlignment = VerticalAlignment.Stretch,
+                HorizontalAlignment = System.Windows.HorizontalAlignment.Center,
+            };
+
+
             panel.Children.Add(processText);
             panel.Children.Add(positionText);
             panel.Children.Add(valueInput);
             panel.Children.Add(PIDBlock);
+            panel.Children.Add(ETCBlock);
             border.Child = panel;
 
             CurrentState = State.Waiting;
@@ -140,6 +150,8 @@ namespace MailMaker.Scripts.AutoBan
                 case State.Processing:
                     {
                         border.Background = RED;
+                        if(process.CurProcessType == ProcessType.InputFromChart)
+                            GetValueFromChart();
                     }
                     break;
                 case State.Waiting:
@@ -173,7 +185,9 @@ namespace MailMaker.Scripts.AutoBan
 
         public void GetValueFromChart()
         {
-
+            int nextIndex = presenter.GetNextIndex();
+            ETCBlock.Text = $"Target Value = {process.Value}";
+            process.Value = presenter.GetSheetData(process.Value, nextIndex);
         }
 
         private string GetProcessName()

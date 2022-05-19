@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "+14Yb8JHkj+OyxA2Bv1wh2Z7z+DKFg3pUFRqUHjFNbVk7+bSYy1dN+blqZzUE6B5+r01dVJ0k78uTtbIuRZieQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\solid9\\source\\repos\\유니티 버전 맞는 닷넷\\testestesadt\\testestesadt.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\solid9\\.nuget\\packages\\ntextcat\\0.3.65\\ntextcat.0.3.65.nupkg.sha512"
+  ],
+  "logs": []
+}
