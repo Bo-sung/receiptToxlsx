@@ -14,70 +14,17 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_PixelRect:
     serializedVersion: 2
-    x: 0
+    x: 1920
     y: 43
     width: 1920
     height: 997
   m_ShowMode: 4
   m_Title: 
-  m_RootView: {fileID: 11}
+  m_RootView: {fileID: 14}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
   m_Maximized: 1
 --- !u!114 &2
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 1047
-    y: 0
-    width: 279
-    height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 16}
-  m_Panes:
-  - {fileID: 16}
-  - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &3
-MonoBehaviour:
-  m_ObjectHideFlags: 52
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
-  m_EditorClassIdentifier: 
-  m_Children: []
-  m_Position:
-    serializedVersion: 2
-    x: 1326
-    y: 0
-    width: 594
-    height: 947
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 20}
-  m_Panes:
-  - {fileID: 20}
-  m_Selected: 0
-  m_LastSelected: 1
---- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -92,18 +39,18 @@ MonoBehaviour:
   m_Children: []
   m_Position:
     serializedVersion: 2
-    x: 311
+    x: 377
     y: 0
-    width: 311
-    height: 492
-  m_MinSize: {x: 202, y: 221}
-  m_MaxSize: {x: 4002, y: 4021}
-  m_ActualView: {fileID: 18}
+    width: 437
+    height: 474
+  m_MinSize: {x: 200, y: 200}
+  m_MaxSize: {x: 4000, y: 4000}
+  m_ActualView: {fileID: 21}
   m_Panes:
-  - {fileID: 18}
+  - {fileID: 21}
   m_Selected: 0
   m_LastSelected: 0
---- !u!114 &5
+--- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -116,19 +63,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 7}
-  - {fileID: 4}
+  - {fileID: 5}
+  - {fileID: 2}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 622
-    height: 492
+    width: 814
+    height: 474
   m_MinSize: {x: 404, y: 221}
   m_MaxSize: {x: 8004, y: 4021}
   vertical: 0
-  controlID: 75
---- !u!114 &6
+  controlID: 20
+--- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,21 +88,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 8}
-  - {fileID: 10}
-  - {fileID: 2}
-  - {fileID: 3}
+  - {fileID: 9}
   m_Position:
     serializedVersion: 2
     x: 0
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 983, y: 492}
-  m_MaxSize: {x: 22006, y: 14042}
-  vertical: 0
-  controlID: 150
---- !u!114 &7
+  m_MinSize: {x: 881, y: 613}
+  m_MaxSize: {x: 16006, y: 18063}
+  vertical: 1
+  controlID: 15
+--- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -172,15 +116,66 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 311
-    height: 492
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 17}
+    width: 377
+    height: 474
+  m_MinSize: {x: 202, y: 221}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 20}
   m_Panes:
-  - {fileID: 17}
+  - {fileID: 20}
   m_Selected: 0
   m_LastSelected: 0
+--- !u!114 &6
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: ConsoleWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 474
+    width: 814
+    height: 197
+  m_MinSize: {x: 102, y: 121}
+  m_MaxSize: {x: 4002, y: 4021}
+  m_ActualView: {fileID: 23}
+  m_Panes:
+  - {fileID: 23}
+  m_Selected: 0
+  m_LastSelected: 0
+--- !u!114 &7
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 3}
+  - {fileID: 6}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 814
+    height: 671
+  m_MinSize: {x: 404, y: 342}
+  m_MaxSize: {x: 8004, y: 8042}
+  vertical: 1
+  controlID: 19
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -198,16 +193,41 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 0
-    width: 425
+    width: 616
     height: 947
   m_MinSize: {x: 201, y: 221}
   m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_ActualView: {fileID: 22}
   m_Panes:
-  - {fileID: 19}
+  - {fileID: 22}
   m_Selected: 0
   m_LastSelected: 0
 --- !u!114 &9
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 8}
+  - {fileID: 11}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1920
+    height: 947
+  m_MinSize: {x: 881, y: 613}
+  m_MaxSize: {x: 16006, y: 18063}
+  vertical: 0
+  controlID: 16
+--- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -223,17 +243,18 @@ MonoBehaviour:
   m_Position:
     serializedVersion: 2
     x: 0
-    y: 492
-    width: 622
-    height: 455
-  m_MinSize: {x: 232, y: 271}
-  m_MaxSize: {x: 10002, y: 10021}
-  m_ActualView: {fileID: 15}
+    y: 671
+    width: 1304
+    height: 276
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 18}
   m_Panes:
-  - {fileID: 15}
+  - {fileID: 18}
+  - {fileID: 17}
   m_Selected: 0
   m_LastSelected: 1
---- !u!114 &10
+--- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -246,19 +267,70 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 5}
-  - {fileID: 9}
+  - {fileID: 12}
+  - {fileID: 10}
   m_Position:
     serializedVersion: 2
-    x: 425
+    x: 616
     y: 0
-    width: 622
+    width: 1304
     height: 947
-  m_MinSize: {x: 404, y: 492}
-  m_MaxSize: {x: 10002, y: 14042}
+  m_MinSize: {x: 680, y: 613}
+  m_MaxSize: {x: 12005, y: 18063}
   vertical: 1
-  controlID: 100
---- !u!114 &11
+  controlID: 17
+--- !u!114 &12
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12010, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Children:
+  - {fileID: 7}
+  - {fileID: 13}
+  m_Position:
+    serializedVersion: 2
+    x: 0
+    y: 0
+    width: 1304
+    height: 671
+  m_MinSize: {x: 680, y: 342}
+  m_MaxSize: {x: 12005, y: 8042}
+  vertical: 0
+  controlID: 18
+--- !u!114 &13
+MonoBehaviour:
+  m_ObjectHideFlags: 52
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 1
+  m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
+  m_Name: InspectorWindow
+  m_EditorClassIdentifier: 
+  m_Children: []
+  m_Position:
+    serializedVersion: 2
+    x: 814
+    y: 0
+    width: 490
+    height: 671
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 19}
+  m_Panes:
+  - {fileID: 19}
+  m_Selected: 0
+  m_LastSelected: 1
+--- !u!114 &14
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -271,9 +343,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Children:
-  - {fileID: 12}
-  - {fileID: 6}
-  - {fileID: 13}
+  - {fileID: 15}
+  - {fileID: 4}
+  - {fileID: 16}
   m_Position:
     serializedVersion: 2
     x: 0
@@ -282,7 +354,7 @@ MonoBehaviour:
     height: 997
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
---- !u!114 &12
+--- !u!114 &15
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -304,7 +376,7 @@ MonoBehaviour:
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
   m_LastLoadedLayoutName: 
---- !u!114 &13
+--- !u!114 &16
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -325,7 +397,7 @@ MonoBehaviour:
     height: 20
   m_MinSize: {x: 0, y: 0}
   m_MaxSize: {x: 0, y: 0}
---- !u!114 &14
+--- !u!114 &17
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -334,24 +406,282 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 12141, guid: 0000000000000000e000000000000000, type: 0}
+  m_Script: {fileID: 139222468, guid: 8dc1be91775c4bb469f6b74cef450eaa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MinSize: {x: 300, y: 360}
+  m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 4000, y: 4000}
   m_TitleContent:
-    m_Text: Navigation
-    m_Image: {fileID: 1087843850482249999, guid: 0000000000000000d000000000000000,
-      type: 0}
+    m_Text: NuGet
+    m_Image: {fileID: 0}
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1095
-    y: 73
-    width: 350
-    height: 926
+    x: 2536
+    y: 744
+    width: 1303
+    height: 255
   m_ViewDataDictionary: {fileID: 0}
---- !u!114 &15
+  hasRefreshed: 1
+  availablePackages:
+  - Id: OpenCVSharp
+    Version: 2.4.0.1
+    Title: OpenCVSharp
+    Description: OpenCVSharp package
+    Summary: 
+    ReleaseNotes: 
+    LicenseUrl: 
+    DownloadUrl: https://www.nuget.org/api/v2/package/OpenCVSharp/2.4.0.1
+    DownloadCount: 45418
+    Authors: OpenCVSharp
+    Icon: {fileID: 0}
+    ProjectUrl: 
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: OpenCvSharp4.runtime.win
+    Version: 4.5.5.20211231
+    Title: OpenCvSharp4 native bindings for Windows x64/x86 (except UWP)
+    Description: Internal implementation package for OpenCvSharp to work on Windows
+      except UWP.
+    Summary: Internal implementation package for OpenCvSharp to work on Windows except
+      UWP.
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/OpenCvSharp4.runtime.win/4.5.5.20211231/license
+    DownloadUrl: https://www.nuget.org/api/v2/package/OpenCvSharp4.runtime.win/4.5.5.20211231
+    DownloadCount: 875138
+    Authors: shimat
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/shimat/opencvsharp
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: OpenCvSharp4
+    Version: 4.5.5.20211231
+    Title: OpenCvSharp core library. A package of separate native bindings for your
+      OS is required.
+    Description: OpenCV wrapper for .NET. Since this package includes only core managed
+      libraries, another package of native bindings for your OS is required (OpenCvSharp4.runtime.*).
+    Summary: OpenCV wrapper for .NET. Since this package includes only core managed
+      libraries, another package of native bindings for your OS is required (OpenCvSharp4.runtime.*).
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/OpenCvSharp4/4.5.5.20211231/license
+    DownloadUrl: https://www.nuget.org/api/v2/package/OpenCvSharp4/4.5.5.20211231
+    DownloadCount: 1024779
+    Authors: shimat
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/shimat/opencvsharp
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: OpenCvSharp-AnyCPU
+    Version: 2.4.10.20170306
+    Title: OpenCvSharp2 [Deprecated]
+    Description: 'OpenCV wrapper for .NET Framework
+
+      Use https://www.nuget.org/packages/OpenCvSharp3-AnyCPU/
+      instead'
+    Summary: OpenCV 2.x wrapper [Deprecated]
+    ReleaseNotes: '- Fixed XML comments'' language'
+    LicenseUrl: http://opensource.org/licenses/BSD-3-Clause
+    DownloadUrl: https://www.nuget.org/api/v2/package/OpenCvSharp-AnyCPU/2.4.10.20170306
+    DownloadCount: 181205
+    Authors: shimat
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/shimat/opencvsharp_2410
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: OpenCvSharp3-AnyCPU
+    Version: 4.0.0.20181129
+    Title: OpenCvSharp3
+    Description: OpenCV wrapper for .NET Framework
+    Summary: OpenCV 4.x wrapper
+    ReleaseNotes: 
+    LicenseUrl: http://opensource.org/licenses/BSD-3-Clause
+    DownloadUrl: https://www.nuget.org/api/v2/package/OpenCvSharp3-AnyCPU/4.0.0.20181129
+    DownloadCount: 925158
+    Authors: shimat
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/shimat/opencvsharp
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: OpenCvSharp4.runtime.ubuntu.18.04-x64
+    Version: 4.5.5.20211231
+    Title: OpenCvSharp native bindings for ubuntu.18.04-x64
+    Description: Internal implementation package for OpenCvSharp to work on Ubuntu
+      18.04
+    Summary: Internal implementation package for OpenCvSharp to work on Ubuntu 18.04
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/OpenCvSharp4.runtime.ubuntu.18.04-x64/4.5.5.20211231/license
+    DownloadUrl: https://www.nuget.org/api/v2/package/OpenCvSharp4.runtime.ubuntu.18.04-x64/4.5.5.20211231
+    DownloadCount: 219411
+    Authors: shimat
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/shimat/opencvsharp
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: OpenCvSharp4.Windows
+    Version: 4.5.5.20211231
+    Title: OpenCvSharp NuGet package for x64/x86 Windows (same as OpenCvSharp3-AnyCPU)
+    Description: OpenCV 4.x wrapper. All-in-one package for Windows users.
+    Summary: OpenCV 4.x wrapper. All-in-one package for Windows users.
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/OpenCvSharp4.Windows/4.5.5.20211231/license
+    DownloadUrl: https://www.nuget.org/api/v2/package/OpenCvSharp4.Windows/4.5.5.20211231
+    DownloadCount: 338262
+    Authors: shimat
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/shimat/opencvsharp
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: OpenCvSharp4.WpfExtensions
+    Version: 4.5.5.20211231
+    Title: OpenCvSharp WPF extension library.
+    Description: OpenCvSharp WPF extension library.
+    Summary: OpenCvSharp WPF extension library.
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/OpenCvSharp4.WpfExtensions/4.5.5.20211231/license
+    DownloadUrl: https://www.nuget.org/api/v2/package/OpenCvSharp4.WpfExtensions/4.5.5.20211231
+    DownloadCount: 122439
+    Authors: shimat
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/shimat/opencvsharp
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: FRC.OpenCvSharp
+    Version: 1.0.3
+    Title: FRC OpenCvSharp
+    Description: OpenCvSharp libraries built for FRC
+    Summary: Native desktop libraries for OpenCvSharp
+    ReleaseNotes: 
+    LicenseUrl: https://github.com/robotdotnet/FRC-OpenCvSharp/blob/master/LICENSE.txt
+    DownloadUrl: https://www.nuget.org/api/v2/package/FRC.OpenCvSharp/1.0.3
+    DownloadCount: 10946
+    Authors: RobotDotNet
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/robotdotnet/FRC-OpenCvSharp
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: FRC.OpenCvSharp.DesktopLibraries
+    Version: 1.0.3
+    Title: FRC OpenCvSharp.DesktopLibraries
+    Description: Native desktop libraries for OpenCvSharp
+    Summary: Native desktop libraries for OpenCvSharp
+    ReleaseNotes: 
+    LicenseUrl: https://github.com/robotdotnet/FRC-OpenCvSharp/blob/master/LICENSE.txt
+    DownloadUrl: https://www.nuget.org/api/v2/package/FRC.OpenCvSharp.DesktopLibraries/1.0.3
+    DownloadCount: 9425
+    Authors: RobotDotNet
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/robotdotnet/FRC-OpenCvSharp
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: Husty.OpenCvSharp
+    Version: 1.2.5
+    Title: Husty.OpenCvSharp
+    Description: Package Description
+    Summary: 
+    ReleaseNotes: 
+    LicenseUrl: 
+    DownloadUrl: https://www.nuget.org/api/v2/package/Husty.OpenCvSharp/1.2.5
+    DownloadCount: 5555
+    Authors: yamashita
+    Icon: {fileID: 0}
+    ProjectUrl: 
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: Aardvark.OpenCvSharp
+    Version: 4.0.2
+    Title: Aardvark.OpenCvSharp
+    Description: Aardvark.OpenCvSharp
+    Summary: 
+    ReleaseNotes: ae0f5d
+    LicenseUrl: 
+    DownloadUrl: https://www.nuget.org/api/v2/package/Aardvark.OpenCvSharp/4.0.2
+    DownloadCount: 3710
+    Authors: VRVis Research Center
+    Icon: {fileID: 0}
+    ProjectUrl: 
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: OpenCvSharp4.runtime.multi-arch
+    Version: 4.3.0.20200527
+    Title: Native binding for OpenCvSharp on Ubuntu x64, Raspian Stretch, Windows
+      10 x86 and Windows 10 x64
+    Description: Meta dependency package for OpenCvSharp to work several platforms
+      found as dependencies. Projects built with OpenCvSharp can be executed inside
+      docker containers deduced from corresponding images found at dockeratso/*-dotnet-core-sdk-opencvsharp:*
+      or native platforms.
+    Summary: Native dependency package for OpenCvSharp to build and run on several
+      platforms
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/OpenCvSharp4.runtime.multi-arch/4.3.0.20200527/license
+    DownloadUrl: https://www.nuget.org/api/v2/package/OpenCvSharp4.runtime.multi-arch/4.3.0.20200527
+    DownloadCount: 15337
+    Authors: dockeratso
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/scienta-scientific/docker.peak-dotnet-opencv-deps
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: lobe.OpenCVSharp
+    Version: 1.0.29
+    Title: lobe.OpenCVSharp
+    Description: Extension for using OpenCVSharp
+    Summary: 
+    ReleaseNotes: 
+    LicenseUrl: https://www.nuget.org/packages/lobe.OpenCVSharp/1.0.29/license
+    DownloadUrl: https://www.nuget.org/api/v2/package/lobe.OpenCVSharp/1.0.29
+    DownloadCount: 1058
+    Authors: lobe.OpenCvSharp
+    Icon: {fileID: 0}
+    ProjectUrl: https://lobe.ai/
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  - Id: Kawaian.OpenCVSharp
+    Version: 1.0.0
+    Title: Kawaian.OpenCVSharp
+    Description: OpenCVSharp port for Xamarin
+    Summary: OpenCVSharp port for Xamarin
+    ReleaseNotes: First release
+    LicenseUrl: https://github.com/Kawaian/OpenCvSharp/blob/nuget-opencvsharp/LICENSE
+    DownloadUrl: https://www.nuget.org/api/v2/package/Kawaian.OpenCVSharp/1.0.0
+    DownloadCount: 1566
+    Authors: Heejun Lee
+    Icon: {fileID: 0}
+    ProjectUrl: https://github.com/Kawaian/OpenCvSharp
+    RepositoryUrl: 
+    RepositoryType: 0
+    RepositoryBranch: 
+    RepositoryCommit: 
+  updatePackages: []
+  numberToSkip: 0
+  defaultIcon: {fileID: 2800000, guid: eec19781926cd2248b7c9abfde8db555, type: 3}
+--- !u!114 &18
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -372,10 +702,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 425
-    y: 565
-    width: 620
-    height: 434
+    x: 2536
+    y: 744
+    width: 1303
+    height: 255
   m_ViewDataDictionary: {fileID: 0}
   m_SearchFilter:
     m_NameFilter: 
@@ -390,20 +720,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Ragnarok/Scripts/Scene/Camera
+    - Assets/Script
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Ragnarok/Scripts/Scene/Camera
+  - Assets/Script
   m_LastFoldersGridSize: 16
-  m_LastProjectPath: E:\receiptToxlsx\My project
+  m_LastProjectPath: E:\LOR_analize\My project
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 498}
-    m_SelectedIDs: c0920000
-    m_LastClickedID: 37568
-    m_ExpandedIDs: 0000000094480000ca480000fe8e0000e2910000c0920000e292000000ca9a3bffffff7f
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: d0380000
+    m_LastClickedID: 14544
+    m_ExpandedIDs: 00000000b6380000b8380000ba380000bc380000be380000c0380000c2380000c4380000c638000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -419,7 +749,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_SearchString: 
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
@@ -431,7 +761,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 
+    m_ExpandedIDs: 00000000b6380000b8380000ba380000bc380000be380000c0380000c2380000c4380000c6380000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -475,7 +805,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 9}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -486,8 +816,8 @@ MonoBehaviour:
     m_ScrollPosition: {x: 0, y: 0}
     m_GridSize: 16
   m_SkipHiddenPackages: 0
-  m_DirectoriesAreaWidth: 213
---- !u!114 &16
+  m_DirectoriesAreaWidth: 264
+--- !u!114 &19
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -508,10 +838,10 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1047
+    x: 3350
     y: 73
-    width: 277
-    height: 926
+    width: 489
+    height: 650
   m_ViewDataDictionary: {fileID: 0}
   m_OpenAddComponentMenu: 0
   m_ObjectsLockedBeforeSerialization: []
@@ -525,7 +855,7 @@ MonoBehaviour:
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
---- !u!114 &17
+--- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -546,33 +876,33 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 425
+    x: 2536
     y: 73
-    width: 309
-    height: 471
+    width: 375
+    height: 453
   m_ViewDataDictionary: {fileID: 0}
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
-      m_LastClickedID: 0
-      m_ExpandedIDs: 7cf5ffff04faffffeefaffff56480000
+      m_SelectedIDs: d8370000
+      m_LastClickedID: 14296
+      m_ExpandedIDs: 68fbffffba370000d8370000f23700002a38000034380000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: wrapper
+        m_OriginalName: wrapper
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 14296
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 7}
+        m_ClientGUIView: {fileID: 5}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -580,7 +910,7 @@ MonoBehaviour:
       m_IsLocked: 0
     m_CurrentSortingName: TransformSorting
   m_WindowGUID: 8332ed3d379ce7e468f67094a49caf87
---- !u!114 &18
+--- !u!114 &21
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -601,24 +931,24 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 736
+    x: 2913
     y: 73
-    width: 309
-    height: 471
+    width: 435
+    height: 453
   m_ViewDataDictionary: {fileID: 0}
   m_ShowContextualTools: 0
   m_WindowGUID: f74925c9147dbda4793c74dfd7dfd893
   m_Gizmos: 1
-  m_SceneIsLit: 1
+  m_SceneIsLit: 0
   m_SceneLighting: 1
   m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 4.388334, y: 7.82921, z: -0.7871094}
+    m_Target: {x: 0.88756615, y: -0.11914687, z: -2.7287085}
     speed: 2
-    m_Value: {x: 4.388334, y: 7.82921, z: -0.7871094}
+    m_Value: {x: 0.88756615, y: -0.11914687, z: -2.7287085}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -631,7 +961,7 @@ MonoBehaviour:
   m_SceneViewState:
     showFog: 1
     showMaterialUpdate: 1
-    showSkybox: 1
+    showSkybox: 0
     showFlares: 1
     showImageEffects: 1
     showParticleSystems: 1
@@ -668,9 +998,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 8.883056
+    m_Target: 1.0457854
     speed: 2
-    m_Value: 8.883056
+    m_Value: 1.0457854
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -695,7 +1025,7 @@ MonoBehaviour:
   m_SceneVisActive: 1
   m_LastLockedObject: {fileID: 0}
   m_ViewIsLockedToObject: 0
---- !u!114 &19
+--- !u!114 &22
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -716,9 +1046,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 0
+    x: 1920
     y: 73
-    width: 424
+    width: 615
     height: 926
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
@@ -729,7 +1059,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 424, y: 905}
+  m_TargetSize: {x: 1080, y: 2316}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -738,23 +1068,23 @@ MonoBehaviour:
   m_VSyncEnabled: 0
   m_Gizmos: 0
   m_Stats: 0
-  m_SelectedSizes: 00000000000000000000000014000000000000000000000000000000000000000000000000000000
+  m_SelectedSizes: 07000000000000000000000014000000000000000000000000000000000000000000000000000000
   m_ZoomArea:
     m_HRangeLocked: 0
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -212
-    m_HBaseRangeMax: 212
-    m_VBaseRangeMin: -452.5
-    m_VBaseRangeMax: 452.5
+    m_HBaseRangeMin: -540
+    m_HBaseRangeMax: 540
+    m_VBaseRangeMin: -1158
+    m_VBaseRangeMax: 1158
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
     m_VAllowExceedBaseRangeMax: 1
     m_ScaleWithWindow: 0
     m_HSlider: 0
-    m_VSlider: 0
+    m_VSlider: 1
     m_IgnoreScrollWheelUntilClicked: 0
     m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
@@ -765,29 +1095,29 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 424
+      width: 615
       height: 905
-    m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 212, y: 452.5}
+    m_Scale: {x: 0.4505571, y: 0.4505571}
+    m_Translation: {x: 307.5, y: 454.1208}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
     m_MarginBottom: 0
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
-      x: -212
-      y: -452.5
-      width: 424
-      height: 905
+      x: -682.4884
+      y: -1007.9095
+      width: 1364.9768
+      height: 2008.6244
     m_MinimalGUI: 1
-  m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 424, y: 926}
+  m_defaultScale: 0.39075994
+  m_LastWindowPixelSize: {x: 615, y: 926}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000001000000000000
   m_XRRenderMode: 0
   m_RenderTexture: {fileID: 0}
---- !u!114 &20
+--- !u!114 &23
 MonoBehaviour:
   m_ObjectHideFlags: 52
   m_CorrespondingSourceObject: {fileID: 0}
@@ -808,8 +1138,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 1326
-    y: 73
-    width: 593
-    height: 926
+    x: 2536
+    y: 547
+    width: 812
+    height: 176
   m_ViewDataDictionary: {fileID: 0}

@@ -104,19 +104,19 @@ public class UIAnchor : MonoBehaviour
 		}
 
 		mRoot = NGUITools.FindInParents<UIRoot>(gameObject);
-		//if (uiCamera == null) uiCamera = NGUITools.FindCameraForLayer(gameObject.layer);
-		if (uiCamera == null) uiCamera = GetAnchorCamera();
+		if (uiCamera == null) uiCamera = NGUITools.FindCameraForLayer(gameObject.layer);
+		//if (uiCamera == null) uiCamera = GetAnchorCamera();
 
 		Update();
 
 		mStarted = true;
 	}
 
-	protected virtual Camera GetAnchorCamera()
-	{
-		//mCam = NGUITools.FindCameraForLayer(cachedGameObject.layer);
-		return Ragnarok.UI.AnchorCamera;
-	}
+	//protected virtual Camera GetAnchorCamera()
+	//{
+	//	//mCam = NGUITools.FindCameraForLayer(cachedGameObject.layer);
+	//	return Ragnarok.UI.AnchorCamera;
+	//}
 
 	/// <summary>
 	/// Anchor the object to the appropriate point.

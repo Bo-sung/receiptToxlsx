@@ -113,8 +113,8 @@ public class UIStretch : MonoBehaviour
 #endif
 		}
 
-		//if (uiCamera == null) uiCamera = NGUITools.FindCameraForLayer(gameObject.layer);
-		if (uiCamera == null) uiCamera = GetAnchorCamera();
+		if (uiCamera == null) uiCamera = NGUITools.FindCameraForLayer(gameObject.layer);
+		//if (uiCamera == null) uiCamera = GetAnchorCamera();
 		mRoot = NGUITools.FindInParents<UIRoot>(gameObject);
 
 		Update();
@@ -122,11 +122,11 @@ public class UIStretch : MonoBehaviour
 		mStarted = true;
 	}
 
-	protected virtual Camera GetAnchorCamera()
-	{
-		//mCam = NGUITools.FindCameraForLayer(cachedGameObject.layer);
-		return Ragnarok.UI.AnchorCamera;
-	}
+	//protected virtual Camera GetAnchorCamera()
+	//{
+	//	//mCam = NGUITools.FindCameraForLayer(cachedGameObject.layer);
+	//	return Ragnarok.UI.AnchorCamera;
+	//}
 
 	void Update ()
 	{

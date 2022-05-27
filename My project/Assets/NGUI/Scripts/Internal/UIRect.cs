@@ -735,8 +735,8 @@ public abstract class UIRect : MonoBehaviour
 		rightAnchor.rect	= (rightAnchor.target)	? rightAnchor.target.GetComponent<UIRect>()	 : null;
 		topAnchor.rect		= (topAnchor.target)	? topAnchor.target.GetComponent<UIRect>()	 : null;
 
-		//mCam = NGUITools.FindCameraForLayer(cachedGameObject.layer);
-		mCam = GetAnchorCamera();
+		mCam = NGUITools.FindCameraForLayer(cachedGameObject.layer);
+		//mCam = GetAnchorCamera();
 
 		FindCameraFor(leftAnchor);
 		FindCameraFor(bottomAnchor);
@@ -746,11 +746,11 @@ public abstract class UIRect : MonoBehaviour
 		mUpdateAnchors = true;
 	}
 
-	protected virtual Camera GetAnchorCamera()
-	{
-		//mCam = NGUITools.FindCameraForLayer(cachedGameObject.layer);
-		return Ragnarok.UI.AnchorCamera;
-	}
+	//protected virtual Camera GetAnchorCamera()
+	//{
+	//	//mCam = NGUITools.FindCameraForLayer(cachedGameObject.layer);
+	//	//return Ragnarok.UI.AnchorCamera;
+	//}
 
 	/// <summary>
 	/// Convenience method that resets and updates the anchors, all at once.
