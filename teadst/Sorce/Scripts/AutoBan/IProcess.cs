@@ -38,8 +38,6 @@ namespace MailMaker.Scripts.AutoBan
         /// <summary>
         /// 프로세스. 0.1초당 한번씩 호출됨
         /// </summary>
-        /// <param name="sender"></param>
-        /// <param name="e"></param>
         void Process();
         /// <summary>
         /// 프로세스 종료

@@ -57,8 +57,8 @@ namespace MailMaker
                 )
             );
             (List<GeneralSheet.Layout> sheets, List<String> heads) = presenter.GeneralSheetLayoutList();
-            ObservableCollection<GeneralSheet.Layout> dump = new ObservableCollection<GeneralSheet.Layout>(sheets);
-            ExcelDataGrid.DataContext = dump;
+            ExcelDataGrid.DataContext = sheets;
+            ExcelDataGrid.SelectedCellsChanged += GotFocusOnDataGrid;
             for (int i = 0; i < heads.Count; i++)
             {
                 ExcelDataGrid.Columns[i].Header = heads[i];
@@ -106,6 +106,10 @@ namespace MailMaker
         private void ProcessStartBtn_Click(object sender, RoutedEventArgs e)
         {
             presenter.StartProcess();
+            if (ProcessStartBtn.Content.Equals("시작"))
+                ProcessRepeattBtn.Content = "중지";
+            else
+                ProcessRepeattBtn.Content = "시작";
         }
         private void ProcessRepeatBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -123,6 +127,29 @@ namespace MailMaker
         private void ResetAllBtn_Click(object sender, RoutedEventArgs e)
         {
             presenter.ResetAll();
+        }
+
+        private void SetBtn_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void GotFocusOnDataGrid(object sender, SelectedCellsChangedEventArgs e)
+        {
+            Point selectedPos = new Point(0, 0);
+            List<Dictionary<GeneralSheet.LayoutTypes, string>> list =  SheetDataDrawer.Instance.GetGeneralSheetListWithDic();
+            for(int y = 0; y < list.Count; ++y)
+            {
+                for(int x = 0; x < list[y].Count; ++x)
+                {
+                    if (list[y][(GeneralSheet.LayoutTypes)x] == (string)ExcelDataGrid.CurrentCell.Item)
+                    {
+                        selectedPos = new Point(x, y);
+                        presenter.SetPositionToRepeat(selectedPos);
+                        break;
+                    }
+                }
+            }
         }
     }
 }

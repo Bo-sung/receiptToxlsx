@@ -34,7 +34,8 @@ namespace MailMaker.Scripts.AutoBan
         public StackPanel panel;
         public TextBlock processText;
         public TextBlock positionText;
-        public System.Windows.Controls.TextBox valueInput;
+        public System.Windows.Controls.TextBox valueInput1;
+        public System.Windows.Controls.TextBox valueInput2;
         public TextBlock PIDBlock;
         public TextBlock ETCBlock;
 
@@ -90,6 +91,7 @@ namespace MailMaker.Scripts.AutoBan
                 VerticalAlignment = VerticalAlignment.Stretch,
                 HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch
             };
+            panel.Children.Add(processText);
 
             positionText = new TextBlock
             {
@@ -97,13 +99,59 @@ namespace MailMaker.Scripts.AutoBan
                 VerticalAlignment = VerticalAlignment.Stretch,
                 HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch,
             };
+            panel.Children.Add(positionText);
 
-            valueInput = new System.Windows.Controls.TextBox
+            if (process.CurProcessType == ProcessType.InputFromChartOne)
             {
-                VerticalAlignment = VerticalAlignment.Stretch,
-                HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch
-            };
-            valueInput.TextChanged += ValueChanged;
+                Grid grid = new Grid
+                {
+                    VerticalAlignment = VerticalAlignment.Stretch,
+                    HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch
+                };
+
+                grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star), });
+                grid.ColumnDefinitions.Add(new ColumnDefinition { Width = new GridLength(1, GridUnitType.Star), });
+
+                valueInput1 = new System.Windows.Controls.TextBox
+                {
+                    VerticalAlignment = VerticalAlignment.Stretch,
+                    HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch
+                };
+                valueInput2 = new System.Windows.Controls.TextBox
+                {
+                    VerticalAlignment = VerticalAlignment.Stretch,
+                    HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch
+                };
+
+                valueInput1.Text = "Column";
+                valueInput2.Text = "Row";
+
+                valueInput1.TextChanged += Value2Changed;
+                valueInput2.TextChanged += Value2Changed;
+
+                valueInput1.GotFocus += RemoveDescript;
+                valueInput2.GotFocus += RemoveDescript;
+
+                Grid.SetColumn(valueInput1, 0);
+                Grid.SetColumn(valueInput2, 1);
+
+                grid.Children.Add(valueInput1);
+                grid.Children.Add(valueInput2);
+                panel.Children.Add(grid);
+            }
+            else
+            {
+                valueInput1 = new System.Windows.Controls.TextBox
+                {
+                    VerticalAlignment = VerticalAlignment.Stretch,
+                    HorizontalAlignment = System.Windows.HorizontalAlignment.Stretch
+                };
+                valueInput1.Text = process.Value;
+                valueInput1.TextChanged += Value1Changed;
+                valueInput1.GotFocus += RemoveDescript;
+                panel.Children.Add(valueInput1);
+            }
+
 
             PIDBlock = new TextBlock
             {
@@ -111,6 +159,7 @@ namespace MailMaker.Scripts.AutoBan
                 VerticalAlignment = VerticalAlignment.Stretch,
                 HorizontalAlignment = System.Windows.HorizontalAlignment.Center,
             };
+            panel.Children.Add(PIDBlock);
 
             ETCBlock = new TextBlock
             {
@@ -118,13 +167,9 @@ namespace MailMaker.Scripts.AutoBan
                 VerticalAlignment = VerticalAlignment.Stretch,
                 HorizontalAlignment = System.Windows.HorizontalAlignment.Center,
             };
-
-
-            panel.Children.Add(processText);
-            panel.Children.Add(positionText);
-            panel.Children.Add(valueInput);
-            panel.Children.Add(PIDBlock);
             panel.Children.Add(ETCBlock);
+
+
             border.Child = panel;
 
             CurrentState = State.Waiting;
@@ -133,7 +178,7 @@ namespace MailMaker.Scripts.AutoBan
 
         ~ProcessBlock()
         {
-            valueInput.TextChanged -= ValueChanged;
+            valueInput1.TextChanged -= Value1Changed;
             process.ProcessDone -= DestroyThis;
         }
 
@@ -178,16 +223,60 @@ namespace MailMaker.Scripts.AutoBan
         }
 
 
-        public void ValueChanged(object sender, TextChangedEventArgs e)
+        public void Value1Changed(object sender, TextChangedEventArgs e)
         {
-            process.Value = valueInput.Text;
+            process.Value = valueInput1.Text;
         }
+
+        public void Value2Changed(object sender, TextChangedEventArgs e)
+        {
+            if(process.CurProcessType == ProcessType.InputFromChartOne)
+            {
+                process.Value = valueInput1.Text + InputProcess.CHART_DATA_DEIVDE_FORMAT + valueInput2.Text;
+            }
+        }
+
+        public void RemoveDescript(object sender, EventArgs e)
+        {
+            if (typeof(System.Windows.Controls.TextBox) == sender.GetType())
+            {
+                System.Windows.Controls.TextBox dump = (System.Windows.Controls.TextBox)sender;
+                if (int.TryParse(dump.Text, out int data))
+                    return;
+                dump.Text = "";
+            }
+        }
+
 
         public void GetValueFromChart()
         {
             int nextIndex = presenter.GetNextIndex();
             ETCBlock.Text = $"Target Value = {process.Value}";
-            process.Value = presenter.GetSheetData(process.Value, nextIndex);
+
+            string str = process.Value;
+
+            string[] val = process.Value.Split(InputProcess.CHART_DATA_DEIVDE_FORMAT);
+            if (!int.TryParse(val[0], out int column))
+                str = "Error position Is Invald";
+            if (!int.TryParse(val[1], out int row))
+                str = "Error index Is Invald";
+
+            switch (process.CurProcessType)
+            {
+                case ProcessType.InputFromChart:
+                    {
+                        str = SheetDataDrawer.Instance.GetGeneralSheetData(column, row, true);
+                    }
+                    break;
+                case ProcessType.InputFromChartOne:
+                    {
+                        str = SheetDataDrawer.Instance.GetGeneralSheetData(column, row);
+                    }
+                    break;
+                default:
+                    return;
+            }
+            process.Value = str;
         }
 
         private string GetProcessName()
@@ -217,7 +306,7 @@ namespace MailMaker.Scripts.AutoBan
         }
         public void Dispose()
         {
-            valueInput.TextChanged -= ValueChanged;
+            valueInput1.TextChanged -= Value1Changed;
             process.ProcessDone -= DestroyThis;
             GC.SuppressFinalize(this);
         }

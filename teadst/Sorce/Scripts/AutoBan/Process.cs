@@ -125,6 +125,11 @@ namespace MailMaker.Scripts.AutoBan
         public System.Action ProcessProgress { get; set; }
         public System.Action ProcessDone { get; set; }
 
+
+        public const char CHART_DATA_DEIVDE_FORMAT = ':';
+
+
+
         public InputProcess(int pid, string value, Position mousePosition, ProcessType processType, AutoBanSheetPresenter presenter)
         {
             PID = pid;
@@ -141,7 +146,15 @@ namespace MailMaker.Scripts.AutoBan
         public void Process()
         {
             MouseKeyboardController.MoveAndLeftClick(MousePosition);
-            SendKeys.SendWait(Value);
+            if(Value.Contains("Error"))
+            {
+                MessageBox.Show(Value);
+                ProcessDone?.Invoke();
+                return;
+            }
+
+            MessageBox.Show(Value);
+            //SendKeys.SendWait(GetValue(CurProcessType));
             ProcessDone?.Invoke();
         }
 
@@ -149,32 +162,8 @@ namespace MailMaker.Scripts.AutoBan
         {
             NextProcess.Start();
         }
-
-        private string GetValue(ProcessType type)
-        {
-            string str = Value;
-
-            switch (type)
-            {
-                case ProcessType.InputValue: return str;
-                case ProcessType.InputFromChart:
-                    {
-
-                    }
-                    break;
-                case ProcessType.InputFromChartOne:
-                    {
-
-                    }break;
-            }
-
-
-            return str;
-        }
-
-
-
     }
+
     public class PauseProcess : IProcess
     {
         public int PID { get; }
