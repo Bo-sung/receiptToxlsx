@@ -118,6 +118,9 @@
     <Compile Include="AutoBan.xaml.cs">
       <DependentUpon>AutoBan.xaml</DependentUpon>
     </Compile>
+    <Compile Include="PositionInputPopup.xaml.cs">
+      <DependentUpon>PositionInputPopup.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Scripts\aabConvertor\aabConverter.cs" />
     <Compile Include="Scripts\AutoBan\IProcess.cs" />
     <Compile Include="Scripts\AutoBan\Process.cs" />
@@ -159,6 +162,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Page Include="AutoBan.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PositionInputPopup.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

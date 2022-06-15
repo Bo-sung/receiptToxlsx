@@ -24,6 +24,9 @@ namespace MailMaker.Scripts.AutoBan
         int PID { get; }
         IProcess NextProcess { get; set; }
         string Value { get; set; }
+        /// <summary>
+        /// 마우스 포지션. 만약 포지션이 0,0인 경우 작동하지 않음
+        /// </summary>
         Position MousePosition { get; set; }
         ProcessType CurProcessType { get; set; }
 

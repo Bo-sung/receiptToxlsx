@@ -71,6 +71,7 @@ namespace MailMaker.Scripts.AutoBan
         {
             this.process = process;
             process.ProcessDone += DestroyThis;
+            
             Init();
             this.presenter = presenter;
             PID = process.PID;
@@ -255,22 +256,31 @@ namespace MailMaker.Scripts.AutoBan
 
             string str = process.Value;
 
-            string[] val = process.Value.Split(InputProcess.CHART_DATA_DEIVDE_FORMAT);
-            if (!int.TryParse(val[0], out int column))
-                str = "Error position Is Invald";
-            if (!int.TryParse(val[1], out int row))
-                str = "Error index Is Invald";
+
 
             switch (process.CurProcessType)
             {
                 case ProcessType.InputFromChart:
                     {
-                        str = SheetDataDrawer.Instance.GetGeneralSheetData(column, row, true);
+                        str = SheetDataDrawer.Instance.GetGeneralSheetData(presenter.CurrentSelectedPosition, true);
                     }
                     break;
                 case ProcessType.InputFromChartOne:
                     {
-                        str = SheetDataDrawer.Instance.GetGeneralSheetData(column, row);
+                        string[] val = process.Value.Split(InputProcess.CHART_DATA_DEIVDE_FORMAT);
+                        if (!int.TryParse(val[0], out int column))
+                        {
+                            str = "Error position Is Invald";
+                            process.Value = str;
+                            return;
+                        }
+                        if (!int.TryParse(val[1], out int row))
+                        {
+                            str = "Error index Is Invald";
+                            process.Value = str;
+                            return;
+                        }
+                        str = SheetDataDrawer.Instance.GetGeneralSheetData(new Point(column, row));
                     }
                     break;
                 default:

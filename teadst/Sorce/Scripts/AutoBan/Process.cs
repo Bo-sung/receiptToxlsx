@@ -34,13 +34,15 @@ namespace MailMaker.Scripts.AutoBan
 
         public void Process()
         {
-            MouseKeyboardController.MoveAndLeftClick(MousePosition);
+            if (MousePosition.IntX != 0 || MousePosition.intY != 0)
+            {
+                MouseKeyboardController.MoveAndLeftClick(MousePosition);
+            }
             Done();
         }
         public void Done()
         {
             ProcessDone?.Invoke();
-            NextProcess.Start();
         }
     }
     public class CopyProcess : IProcess
@@ -69,14 +71,16 @@ namespace MailMaker.Scripts.AutoBan
 
         public void Process()
         {
-            MouseKeyboardController.MoveAndLeftClick(MousePosition);
+            if (MousePosition.IntX != 0 || MousePosition.intY != 0)
+            {
+                MouseKeyboardController.MoveAndLeftClick(MousePosition);
+            }
             SendKeys.SendWait("^c");
             ProcessDone?.Invoke();
         }
 
         public void Done()
         {
-            NextProcess.Start();
         }
     }
     public class PasteProcess : IProcess
@@ -104,14 +108,16 @@ namespace MailMaker.Scripts.AutoBan
 
         public void Process()
         {
-            MouseKeyboardController.MoveAndLeftClick(MousePosition);
+            if (MousePosition.IntX != 0 || MousePosition.intY != 0)
+            {
+                MouseKeyboardController.MoveAndLeftClick(MousePosition);
+            }
             SendKeys.SendWait("^v");
             ProcessDone?.Invoke();
         }
 
         public void Done()
         {
-            NextProcess.Start();
         }
     }
     public class InputProcess : IProcess
@@ -145,22 +151,24 @@ namespace MailMaker.Scripts.AutoBan
 
         public void Process()
         {
-            MouseKeyboardController.MoveAndLeftClick(MousePosition);
-            if(Value.Contains("Error"))
+            if (MousePosition.IntX != 0 || MousePosition.intY != 0)
+            {
+                MouseKeyboardController.MoveAndLeftClick(MousePosition);
+            }
+            if (Value.Contains("Error"))
             {
                 MessageBox.Show(Value);
                 ProcessDone?.Invoke();
                 return;
             }
 
-            MessageBox.Show(Value);
-            //SendKeys.SendWait(GetValue(CurProcessType));
+            //MessageBox.Show(Value);
+            SendKeys.SendWait(Value);
             ProcessDone?.Invoke();
         }
 
         public void Done()
         {
-            NextProcess.Start();
         }
     }
 
@@ -200,7 +208,6 @@ namespace MailMaker.Scripts.AutoBan
 
         public void Done()
         {
-            ProcessDone?.Invoke();
         }
     }
     public class SelectProcess : IProcess
@@ -229,7 +236,10 @@ namespace MailMaker.Scripts.AutoBan
         }
         public void Process()
         {
-            MouseKeyboardController.MoveAndLeftClick(MousePosition);
+            if (MousePosition.IntX != 0 || MousePosition.intY != 0)
+            {                
+                MouseKeyboardController.MoveAndLeftClick(MousePosition);
+            }
             MouseKeyboardController.LeftClick();
             SendKeys.SendWait("^a");
             ProcessDone?.Invoke();
@@ -266,7 +276,10 @@ namespace MailMaker.Scripts.AutoBan
         }
         public void Process()
         {
-            MouseKeyboardController.MoveAndLeftClick(MousePosition);
+            if (MousePosition.IntX != 0 || MousePosition.intY != 0)
+            {
+                MouseKeyboardController.MoveAndLeftClick(MousePosition);
+            }
             MouseKeyboardController.LeftClick();
             SendKeys.SendWait("^a");
             SendKeys.SendWait("{DELETE}");

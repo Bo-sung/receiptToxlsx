@@ -16,14 +16,62 @@
         </Grid.RowDefinitions>
         <Grid x:Name="OptionGrid" Grid.Row="0">
             <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="120"/>
-                <ColumnDefinition Width="120"/>
-                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="80"/>
                 <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="80"/>
+                <ColumnDefinition Width="40"/>
+                <ColumnDefinition Width="120"/>
+                <ColumnDefinition Width="40"/>
             </Grid.ColumnDefinitions>
             <Button x:Name="ResetFirstBtn" Content="첫번쨰 제거" Margin="5,2.5,5,2.5" Grid.Column="0"/>
             <Button x:Name="ResetLastBtn" Content="마지막 제거" Margin="5,2.5,5,2.5" Grid.Column="1"/>
             <Button x:Name="ResetAllBtn" Content="전부 리셋" Margin="5,2.5,5,2.5" Grid.Column="2" Click="ResetAllBtn_Click"/>
+            <TextBlock x:Name="SavedMousePosDesc" Text="저장된 마우스 위치" HorizontalAlignment ="Center"  VerticalAlignment="Center" Grid.Column="13" />
+            <Grid Grid.Column="14">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="1.2*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="SavedMousePosXDesc" Text="X : " HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column = "0" Grid.Row="0"/>
+                <TextBlock x:Name="SavedMousePosYDesc" Text="Y : "  HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column = "0" Grid.Row="1"/>
+                <TextBlock x:Name="SavedMousePosX" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column = "1" Grid.Row="0"/>
+                <TextBlock x:Name="SavedMousePosY" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column = "1" Grid.Row="1"/>
+            </Grid>
+            <TextBlock x:Name="CurrnetIndexDesc" Text="현재 인덱스 :" HorizontalAlignment ="Right"  VerticalAlignment="Center" Grid.Column="15" />
+            <TextBlock x:Name="CurrentIndex" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="16"/>
+            <TextBlock x:Name="CurrentMousePosDesc" Text="현재 마우스 위치" HorizontalAlignment ="Center"  VerticalAlignment="Center" Grid.Column="17" />
+            <Grid Grid.Column="18">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="1.2*"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="CurrentMousePosXDesc" Text="X : " HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column = "0" Grid.Row="0"/>
+                <TextBlock x:Name="CurrentMousePosYDesc" Text="Y : "  HorizontalAlignment="Right" VerticalAlignment="Center" Grid.Column = "0" Grid.Row="1"/>
+                <TextBlock x:Name="CurrentMousePosX" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column = "1" Grid.Row="0"/>
+                <TextBlock x:Name="CurrentMousePosY" Text="0" HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column = "1" Grid.Row="1"/>
+            </Grid>
+
         </Grid>
         <Grid Grid.Row="1">
             <Grid.RowDefinitions>
@@ -32,12 +80,14 @@
             </Grid.RowDefinitions>
             <Grid Grid.Row="0">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="200"/>
+                    <ColumnDefinition Width="100"/>
                     <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="3*"/>
                     <ColumnDefinition Width="200"/>
                 </Grid.ColumnDefinitions>
-                <Button x:Name="SetPoint1Btn" Content="마우스 포지션 설정" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="0" Margin="5,2.5,5,2.5" Click="SetPointBtn_Click"/>
-                <ComboBox x:Name="ModeSelector" Grid.Column="1" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="5,2.5,5,2.5" SelectedIndex="0">
+                <Button x:Name="SetPoint1Btn" Content="커서 위치 녹화" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="0" Margin="5,2.5,5,2.5" Click="SetPointBtn_Click"/>
+                <Button x:Name="SetPointManualBtn" Content="커서 위치 직접 지정" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="1" Margin="5,2.5,5,2.5" Click="SetPointManualBtn_Click"/>
+                <ComboBox x:Name="ModeSelector" Grid.Column="2" HorizontalAlignment="Stretch"  VerticalAlignment="Stretch" Margin="5,2.5,5,2.5" SelectedIndex="0">
                     <ComboBoxItem Content="대기" TabIndex="0"/>
                     <ComboBoxItem Content="클릭" TabIndex="1"/>
                     <ComboBoxItem Content="복사" TabIndex="2"/>
@@ -48,7 +98,7 @@
                     <ComboBoxItem Content="전체 선택" TabIndex="7"/>
                     <ComboBoxItem Content="삭제" TabIndex="8"/>
                 </ComboBox>
-                <Button x:Name="AddProcessBtn" Content="프로세스 추가" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="2" Margin="5,2.5,5,2.5" Click="AddProcessBtn_Click"/>
+                <Button x:Name="AddProcessBtn" Content="프로세스 추가" VerticalAlignment="Stretch" HorizontalAlignment="Stretch" Grid.Column="3" Margin="5,2.5,5,2.5" Click="AddProcessBtn_Click"/>
             </Grid>
             <Grid Grid.Row="1">
                 <Grid.ColumnDefinitions>

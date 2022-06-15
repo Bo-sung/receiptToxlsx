@@ -119,8 +119,14 @@ namespace SheetViewer
         bool isPlaying;
         bool isRepeatMode;
         private StackPanel _processPanel;
+        public (int, int, string) CurrentSelectedCell { get; set; }
+        public Point CurrentSelectedPosition { get; set; }
 
         private int nextIndex = -1;
+
+        public System.Action<int, int> OnUpdateMousePosition;
+        public System.Action<int> OnUpdateIndexNumber;
+
 
         //호출시 마다 1씩 증가됨
         public int GetNextIndex()
@@ -137,6 +143,7 @@ namespace SheetViewer
         {
             throw new NotImplementedException();
         }
+
         public AutoBanSheetPresenter(StackPanel processPanel)
         {
             _processPanel = processPanel;
@@ -146,15 +153,16 @@ namespace SheetViewer
         {
             _sheetmodel = sheetModel;
             _isModelEnabled = true;
-            SheetDataDrawer.Instance.Initialize(sheetModel);
+            generalSheet = _sheetmodel.GetGeneralSheet();
+            _generalSheetData = (generalSheet.Layouts, generalSheet.Heads);
+
+            SheetDataDrawer.Instance.Initialize(sheetModel, generalSheet);
         }
 
         public AutoBanSheetPresenter(SheetModel sheetModel, StackPanel processPanel)
         {
-            _sheetmodel = sheetModel;
-            _isModelEnabled = true;
+            ModelImport(sheetModel);
             _processPanel = processPanel;
-            SheetDataDrawer.Instance.Initialize(sheetModel);
         }
 
         public List<VersionSheet.Layout> GetSheetLayoutList()
@@ -172,7 +180,7 @@ namespace SheetViewer
                 if (generalSheet == null)
                     generalSheet = _sheetmodel.GetGeneralSheet();
 
-                if(_generalSheetData != (null,null))
+                if (_generalSheetData != (null, null))
                     return _generalSheetData;
 
                 _generalSheetData = (generalSheet.Layouts, generalSheet.Heads);
@@ -254,11 +262,24 @@ namespace SheetViewer
                 System.Windows.MessageBox.Show("Stop Playing!!");
 
                 isPlaying = false;
+                _bitFlag_interrupt = 1;
+                return;
+            }
+
+            if(processList == null)
+            {
+                System.Windows.MessageBox.Show("Nothing to do!!");
+                isPlaying = false;
+                _bitFlag_interrupt = 1;
+                return;
             }
 
             if (processList.Count == 0)
             {
                 System.Windows.MessageBox.Show("Nothing to do!!");
+                isPlaying = false;
+                _bitFlag_interrupt = 1;
+                return;
             }
             isPlaying = true;
             ProcessBlockList[0].ChangeColor(ProcessBlock.State.Processing);
@@ -278,7 +299,6 @@ namespace SheetViewer
         }
         public void DoneProcess()
         {
-
             if (processList.Count == 0)
             {
                 isPlaying = false;
@@ -321,11 +341,12 @@ namespace SheetViewer
                 ProcessBlockList[0].ChangeColor(ProcessBlock.State.Processing);
                 processList[0].Start();
             }
+            OnUpdateIndexNumber?.Invoke(SheetDataDrawer.Instance.GetSeqOfChartProcess());
         }
 
         public void SetPositionToRepeat(Point positon)
         {
-            
+
         }
 
         public void RemoveFromPanel(string pid)
@@ -338,7 +359,7 @@ namespace SheetViewer
             processList.Clear();
             ProcessBlockList.Clear();
             _processPanel.Children.Clear();
-
+            
             isPlaying = false;
         }
 
@@ -356,33 +377,13 @@ namespace SheetViewer
             _processPanel.Children.RemoveAt(_processPanel.Children.Count - 1);
         }
 
-        public string GetSheetData(int row, int col)
+        public void SelectedCell(int column, int row, string value, Point point)
         {
-            //시트 데이터 받기
-            return _generalSheetData.Item1[col].GetRowData(row);
-        }
-        public string GetSheetData(string head, int index, bool IsRow = false)
-        {
-            if (IsRow)
-                return generalSheet.GetRow(head)[index];
-
-            //시트 데이터 받기
-            return generalSheet.GetCol(head)[index];
-        }
-
-        public List<string> GetSheetDatas(string head)
-        {
-            int index = generalSheet.Heads.IndexOf(head);
-            if (index != -1)
-            {
-                return generalSheet.GetRow(head).ToList<string>();
-            }
-            else
-            {
-                return null;
-            }
+            CurrentSelectedCell = (column, row, value);
+            CurrentSelectedPosition = point;
         }
     }
+
 
     /// <summary>
     /// 시트 데이터 저장 및 불러오기용 인스턴스. 싱글톤
@@ -415,6 +416,12 @@ namespace SheetViewer
         List<VersionSheet.Layout> versionsheetData;
         public bool isInit = false;
         private int _seq_of_ChartProcess = -1;
+
+        public int GetSeqOfChartProcess()
+        {
+            return _seq_of_ChartProcess;
+        }
+
         public Point RepeatPoint { get; set; }
         protected SheetDataDrawer()
         {
@@ -430,7 +437,37 @@ namespace SheetViewer
             versionsheetData = versionSheet.Data;
             isInit = false;
         }
-    
+
+        public void Initialize(SheetModel sheetModel, GeneralSheet generalsheet)
+        {
+            this.sheetmodel = sheetModel;
+            this.generalSheet = generalsheet;
+            generalsheetData = this.generalSheet.Layouts;
+            versionSheet = sheetModel.GetVerSheet();
+            versionsheetData = versionSheet.Data;
+            isInit = false;
+        }
+
+        public void Initialize(SheetModel sheetModel, VersionSheet versionSheet)
+        {
+            this.sheetmodel = sheetModel;
+            generalSheet = sheetmodel.GetGeneralSheet();
+            generalsheetData = generalSheet.Layouts;
+            this.versionSheet = versionSheet;
+            versionsheetData = this.versionSheet.Data;
+            isInit = false;
+        }
+
+        public void Initialize(SheetModel sheetModel, GeneralSheet generalsheet, VersionSheet versionSheet)
+        {
+            this.sheetmodel = sheetModel;
+            this.generalSheet = generalsheet;
+            generalsheetData = this.generalSheet.Layouts;
+            this.versionSheet = versionSheet;
+            versionsheetData = this.versionSheet.Data;
+            isInit = false;
+        }
+
         public List<GeneralSheet.Layout> GetGeneralSheetLayouts()
         {
             if (generalsheetData == null)
@@ -439,7 +476,7 @@ namespace SheetViewer
             return generalsheetData;
         }
 
-        public Dictionary<GeneralSheet.LayoutTypes, Dictionary<string, List<GeneralSheet.Layout>>> GetGeneralSheetDictionary()
+        public Dictionary<GeneralSheet.LayoutTypes, Dictionary<GeneralSheet.LayoutElement, List<GeneralSheet.LayoutWithPos>>> GetGeneralSheetDictionary()
         {
             return generalSheet.LayoutDic;
         }
@@ -476,10 +513,10 @@ namespace SheetViewer
         {
             if (RepeatPoint == null)
                 RepeatPoint = new Point(0,0);
-            return GetGeneralSheetData((int)RepeatPoint.Y, (int)RepeatPoint.X,true);
+            return GetGeneralSheetData(RepeatPoint,true);
         }
 
-        public string GetGeneralSheetData(int row, int column, bool isSeq = false)
+        public string GetGeneralSheetData(Point point, bool isSeq = false)
         {
             string result = "";
             if (isSeq)
@@ -493,16 +530,21 @@ namespace SheetViewer
                     return "Error SheetData Is Overloaded";
                 }
 
-                result = generalSheet.LayoutListWithDic[column + _seq_of_ChartProcess][(GeneralSheet.LayoutTypes)column];
+                result = generalSheet.SheetDataArrayArray[(int)point.X + _seq_of_ChartProcess + 1][(int)point.Y];
+
                 _seq_of_ChartProcess++;
             }
             else
-                result = generalSheet.LayoutListWithDic[column][(GeneralSheet.LayoutTypes)column];
+                result = generalSheet.LayoutListWithDic[(int)point.X][(GeneralSheet.LayoutTypes)point.X];
 
             if(result == null)
                 return "Error SheetData Is Empty";
 
             return result;
+        }
+        public GeneralSheet GetGeneralSheet()
+        {
+            return generalSheet;
         }
     }
 

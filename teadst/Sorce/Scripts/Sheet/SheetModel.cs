@@ -70,7 +70,7 @@ namespace SheetViewer
         public GeneralSheet GetGeneralSheet()
         {
             IList<IList<object>> sheet = GetSheet();
-            return new GeneralSheet(sheet, true);
+            return new GeneralSheet(sheet);
         }
 
         /// <summary>
