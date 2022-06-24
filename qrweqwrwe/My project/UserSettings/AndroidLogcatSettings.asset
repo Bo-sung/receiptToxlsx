@@ -1,0 +1,149 @@
+{
+    "m_SelectedDeviceId": "R3CN70EM3FZ",
+    "m_SelectedPackage": {
+        "deviceId": "R3CN70EM3FZ",
+        "name": "com.DefaultCompany.Myproject",
+        "processId": 20698,
+        "exited": false
+    },
+    "m_SelectedPriority": 0,
+    "m_KnownPackagesForSerialization": [
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 8966,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.idleif.abyssrium",
+            "processId": 9588,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 11181,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 13627,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 14623,
+            "exited": true
+        },
+        {
+            "deviceId": "emulator-5554",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 14085,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN70EM3FZ",
+            "name": "com.sec.android.app.launcher",
+            "processId": 3112,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN70EM3FZ",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 25857,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CN70EM3FZ",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 27566,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CN70EM3FZ",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 17876,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CN70EM3FZ",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 18909,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CN70EM3FZ",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 17617,
+            "exited": true
+        },
+        {
+            "deviceId": "R3CN70EM3FZ",
+            "name": "com.google.android.youtube",
+            "processId": 25089,
+            "exited": false
+        },
+        {
+            "deviceId": "R3CN70EM3FZ",
+            "name": "com.DefaultCompany.Myproject",
+            "processId": 20698,
+            "exited": false
+        }
+    ],
+    "m_Tags": {
+        "m_Entries": [
+            {
+                "m_Name": "Filter by all listed tags",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "No Filter",
+                "m_Selected": true
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Tag Control...",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "Unity",
+                "m_Selected": false
+            },
+            {
+                "m_Name": "CRASH",
+                "m_Selected": false
+            }
+        ]
+    },
+    "m_MemoryViewerState": {
+        "MemoryWindowHeight": 300.0,
+        "MemoryWindowWidth": 170.0,
+        "MemoryTypeEnabled": [
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true
+        ],
+        "MemoryGroup": 2,
+        "Behavior": 0
+    },
+    "m_Filter": "",
+    "m_FilterIsRegularExpression": false,
+    "m_SymbolPaths": []
+}

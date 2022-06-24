@@ -1,0 +1,36 @@
+{
+    "movement": 0,
+    "dragEffect": 2,
+    "restrictWithinPanel": true,
+    "constrainOnDrag": false,
+    "disableDragIfFits": false,
+    "smoothDragStart": true,
+    "iOSDragEmulation": true,
+    "scrollWheelFactor": 0.25,
+    "momentumAmount": 35.0,
+    "dampenStrength": 9.0,
+    "horizontalScrollBar": {
+        "instanceID": 0
+    },
+    "verticalScrollBar": {
+        "instanceID": 0
+    },
+    "showScrollBars": 1,
+    "customMovement": {
+        "x": 1.0,
+        "y": 0.0
+    },
+    "contentPivot": 0,
+    "scale": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+    },
+    "relativePositionOnReset": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "centerOnChild": {
+        "instanceID": 0
+    }
+}

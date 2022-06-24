@@ -1,0 +1,39 @@
+{
+    "tweenTarget": {
+        "instanceID": 16426
+    },
+    "hover": {
+        "r": 0.8823529481887817,
+        "g": 0.7843137383460999,
+        "b": 0.5882353186607361,
+        "a": 1.0
+    },
+    "pressed": {
+        "r": 0.7176470756530762,
+        "g": 0.6392157077789307,
+        "b": 0.48235294222831728,
+        "a": 1.0
+    },
+    "disabledColor": {
+        "r": 0.5,
+        "g": 0.5,
+        "b": 0.5,
+        "a": 1.0
+    },
+    "duration": 0.20000000298023225,
+    "dragHighlight": false,
+    "hoverSprite": "",
+    "pressedSprite": "",
+    "disabledSprite": "",
+    "hoverSprite2D": {
+        "instanceID": 0
+    },
+    "pressedSprite2D": {
+        "instanceID": 0
+    },
+    "disabledSprite2D": {
+        "instanceID": 0
+    },
+    "pixelSnap": false,
+    "onClick": []
+}

@@ -1,0 +1,101 @@
+{
+    "leftAnchor": {
+        "target": {
+            "instanceID": 0
+        },
+        "relative": 0.0,
+        "absolute": 0
+    },
+    "rightAnchor": {
+        "target": {
+            "instanceID": 0
+        },
+        "relative": 1.0,
+        "absolute": 0
+    },
+    "bottomAnchor": {
+        "target": {
+            "instanceID": 0
+        },
+        "relative": 0.0,
+        "absolute": 0
+    },
+    "topAnchor": {
+        "target": {
+            "instanceID": 0
+        },
+        "relative": 1.0,
+        "absolute": 0
+    },
+    "updateAnchors": 1,
+    "mColor": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+    },
+    "mPivot": 4,
+    "mWidth": 120,
+    "mHeight": 20,
+    "mDepth": 1,
+    "mMat": {
+        "instanceID": 0
+    },
+    "autoResizeBoxCollider": false,
+    "hideIfOffScreen": false,
+    "keepAspectRatio": 0,
+    "aspectRatio": 6.0,
+    "keepCrispWhenShrunk": 1,
+    "mTrueTypeFont": {
+        "instanceID": 0
+    },
+    "mFont": {
+        "instanceID": 0
+    },
+    "mText": "New Label",
+    "mFontSize": 40,
+    "mFontStyle": 0,
+    "mAlignment": 0,
+    "mEncoding": true,
+    "mMaxLineCount": 0,
+    "mEffectStyle": 0,
+    "mEffectColor": {
+        "r": 0.0,
+        "g": 0.0,
+        "b": 0.0,
+        "a": 1.0
+    },
+    "mSymbols": 1,
+    "mEffectDistance": {
+        "x": 1.0,
+        "y": 1.0
+    },
+    "mOverflow": 0,
+    "mApplyGradient": true,
+    "mGradientTop": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 1.0
+    },
+    "mGradientBottom": {
+        "r": 0.699999988079071,
+        "g": 0.699999988079071,
+        "b": 0.699999988079071,
+        "a": 1.0
+    },
+    "mSpacingX": 0,
+    "mSpacingY": 0,
+    "mUseFloatSpacing": false,
+    "mFloatSpacingX": 0.0,
+    "mFloatSpacingY": 0.0,
+    "mOverflowEllipsis": false,
+    "mOverflowWidth": 0,
+    "mOverflowHeight": 0,
+    "mModifier": 0,
+    "mShrinkToFit": false,
+    "mMaxLineWidth": 0,
+    "mMaxLineHeight": 0,
+    "mLineWidth": 0.0,
+    "mMultiline": true
+}

@@ -1,0 +1,621 @@
+{
+    "Sprite": {
+        "Sprite": {
+            "tweenTarget": {
+                "instanceID": 16426
+            },
+            "hover": {
+                "r": 0.8823529481887817,
+                "g": 0.7843137383460999,
+                "b": 0.5882353186607361,
+                "a": 1.0
+            },
+            "pressed": {
+                "r": 0.7176470756530762,
+                "g": 0.6392157077789307,
+                "b": 0.48235294222831728,
+                "a": 1.0
+            },
+            "disabledColor": {
+                "r": 0.5,
+                "g": 0.5,
+                "b": 0.5,
+                "a": 1.0
+            },
+            "duration": 0.20000000298023225,
+            "dragHighlight": false,
+            "hoverSprite": "",
+            "pressedSprite": "",
+            "disabledSprite": "",
+            "hoverSprite2D": {
+                "instanceID": 0
+            },
+            "pressedSprite2D": {
+                "instanceID": 0
+            },
+            "disabledSprite2D": {
+                "instanceID": 0
+            },
+            "pixelSnap": false,
+            "onClick": []
+        }
+    }"Sprite": {
+        "Sprite": {
+            "leftAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 0.0,
+                "absolute": 0
+            },
+            "rightAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 1.0,
+                "absolute": 0
+            },
+            "bottomAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 0.0,
+                "absolute": 0
+            },
+            "topAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 1.0,
+                "absolute": 0
+            },
+            "updateAnchors": 1,
+            "mColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "mPivot": 4,
+            "mWidth": 696,
+            "mHeight": 564,
+            "mDepth": 0,
+            "mMat": {
+                "instanceID": 0
+            },
+            "autoResizeBoxCollider": false,
+            "hideIfOffScreen": false,
+            "keepAspectRatio": 0,
+            "aspectRatio": 1.2340425252914429,
+            "mType": 0,
+            "mFillDirection": 4,
+            "mFillAmount": 1.0,
+            "mInvert": false,
+            "mFlip": 0,
+            "mApplyGradient": false,
+            "mGradientTop": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "mGradientBottom": {
+                "r": 0.699999988079071,
+                "g": 0.699999988079071,
+                "b": 0.699999988079071,
+                "a": 1.0
+            },
+            "centerType": 1,
+            "leftType": 1,
+            "rightType": 1,
+            "bottomType": 1,
+            "topType": 1,
+            "mAtlas": {
+                "instanceID": 13870
+            },
+            "mSpriteName": "white",
+            "mFillCenter": true
+        }
+    }"Label": {
+        "Label": {
+            "leftAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 0.0,
+                "absolute": 0
+            },
+            "rightAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 1.0,
+                "absolute": 0
+            },
+            "bottomAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 0.0,
+                "absolute": 0
+            },
+            "topAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 1.0,
+                "absolute": 0
+            },
+            "updateAnchors": 1,
+            "mColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "mPivot": 4,
+            "mWidth": 120,
+            "mHeight": 20,
+            "mDepth": 1,
+            "mMat": {
+                "instanceID": 0
+            },
+            "autoResizeBoxCollider": false,
+            "hideIfOffScreen": false,
+            "keepAspectRatio": 0,
+            "aspectRatio": 6.0,
+            "keepCrispWhenShrunk": 1,
+            "mTrueTypeFont": {
+                "instanceID": 0
+            },
+            "mFont": {
+                "instanceID": 0
+            },
+            "mText": "New Label",
+            "mFontSize": 40,
+            "mFontStyle": 0,
+            "mAlignment": 0,
+            "mEncoding": true,
+            "mMaxLineCount": 0,
+            "mEffectStyle": 0,
+            "mEffectColor": {
+                "r": 0.0,
+                "g": 0.0,
+                "b": 0.0,
+                "a": 1.0
+            },
+            "mSymbols": 1,
+            "mEffectDistance": {
+                "x": 1.0,
+                "y": 1.0
+            },
+            "mOverflow": 0,
+            "mApplyGradient": true,
+            "mGradientTop": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "mGradientBottom": {
+                "r": 0.699999988079071,
+                "g": 0.699999988079071,
+                "b": 0.699999988079071,
+                "a": 1.0
+            },
+            "mSpacingX": 0,
+            "mSpacingY": 0,
+            "mUseFloatSpacing": false,
+            "mFloatSpacingX": 0.0,
+            "mFloatSpacingY": 0.0,
+            "mOverflowEllipsis": false,
+            "mOverflowWidth": 0,
+            "mOverflowHeight": 0,
+            "mModifier": 0,
+            "mShrinkToFit": false,
+            "mMaxLineWidth": 0,
+            "mMaxLineHeight": 0,
+            "mLineWidth": 0.0,
+            "mMultiline": true
+        }
+    }"Texture": {
+        "Texture": {
+            "leftAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 0.0,
+                "absolute": 0
+            },
+            "rightAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 1.0,
+                "absolute": 0
+            },
+            "bottomAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 0.0,
+                "absolute": 0
+            },
+            "topAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 1.0,
+                "absolute": 0
+            },
+            "updateAnchors": 1,
+            "mColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "mPivot": 4,
+            "mWidth": 100,
+            "mHeight": 100,
+            "mDepth": 2,
+            "mMat": {
+                "instanceID": 0
+            },
+            "autoResizeBoxCollider": false,
+            "hideIfOffScreen": false,
+            "keepAspectRatio": 0,
+            "aspectRatio": 1.0,
+            "mType": 0,
+            "mFillDirection": 4,
+            "mFillAmount": 1.0,
+            "mInvert": false,
+            "mFlip": 0,
+            "mApplyGradient": false,
+            "mGradientTop": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "mGradientBottom": {
+                "r": 0.699999988079071,
+                "g": 0.699999988079071,
+                "b": 0.699999988079071,
+                "a": 1.0
+            },
+            "centerType": 1,
+            "leftType": 1,
+            "rightType": 1,
+            "bottomType": 1,
+            "topType": 1,
+            "mRect": {
+                "serializedVersion": "2",
+                "x": 0.0,
+                "y": 0.0,
+                "width": 1.0,
+                "height": 1.0
+            },
+            "mTexture": {
+                "instanceID": 0
+            },
+            "mShader": {
+                "instanceID": 408
+            },
+            "mBorder": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "mFixedAspect": false
+        }
+    }"2D Sprite": {
+        "2D Sprite": {
+            "leftAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 0.0,
+                "absolute": 0
+            },
+            "rightAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 1.0,
+                "absolute": 0
+            },
+            "bottomAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 0.0,
+                "absolute": 0
+            },
+            "topAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 1.0,
+                "absolute": 0
+            },
+            "updateAnchors": 1,
+            "mColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "mPivot": 4,
+            "mWidth": 100,
+            "mHeight": 100,
+            "mDepth": 3,
+            "mMat": {
+                "instanceID": 0
+            },
+            "autoResizeBoxCollider": false,
+            "hideIfOffScreen": false,
+            "keepAspectRatio": 0,
+            "aspectRatio": 1.0,
+            "mType": 0,
+            "mFillDirection": 4,
+            "mFillAmount": 1.0,
+            "mInvert": false,
+            "mFlip": 0,
+            "mApplyGradient": false,
+            "mGradientTop": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "mGradientBottom": {
+                "r": 0.699999988079071,
+                "g": 0.699999988079071,
+                "b": 0.699999988079071,
+                "a": 1.0
+            },
+            "centerType": 1,
+            "leftType": 1,
+            "rightType": 1,
+            "bottomType": 1,
+            "topType": 1,
+            "mSprite": {
+                "instanceID": 0
+            },
+            "mShader": {
+                "instanceID": 408
+            },
+            "mBorder": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0,
+                "w": 0.0
+            },
+            "mFixedAspect": false,
+            "mPixelSize": 1.0,
+            "nextSprite": {
+                "instanceID": 0
+            }
+        }
+    }"Container": {
+        "Container": {
+            "leftAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 0.0,
+                "absolute": 0
+            },
+            "rightAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 1.0,
+                "absolute": 0
+            },
+            "bottomAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 0.0,
+                "absolute": 0
+            },
+            "topAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 1.0,
+                "absolute": 0
+            },
+            "updateAnchors": 1,
+            "mColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0,
+                "a": 1.0
+            },
+            "mPivot": 4,
+            "mWidth": 100,
+            "mHeight": 100,
+            "mDepth": 4,
+            "mMat": {
+                "instanceID": 0
+            },
+            "autoResizeBoxCollider": false,
+            "hideIfOffScreen": false,
+            "keepAspectRatio": 0,
+            "aspectRatio": 1.0
+        }
+    }"Panel": {
+        "Panel": {
+            "leftAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 0.0,
+                "absolute": 0
+            },
+            "rightAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 1.0,
+                "absolute": 0
+            },
+            "bottomAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 0.0,
+                "absolute": 0
+            },
+            "topAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 1.0,
+                "absolute": 0
+            },
+            "updateAnchors": 1,
+            "showInPanelTool": true,
+            "generateNormals": false,
+            "generateUV2": false,
+            "shadowMode": 0,
+            "widgetsAreStatic": false,
+            "cullWhileDragging": true,
+            "alwaysOnScreen": false,
+            "anchorOffset": false,
+            "softBorderPadding": true,
+            "renderQueue": 0,
+            "startingRenderQueue": 3001,
+            "mClipTexture": {
+                "instanceID": 0
+            },
+            "mAlpha": 1.0,
+            "mClipping": 0,
+            "mClipRange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 300.0,
+                "w": 200.0
+            },
+            "mClipSoftness": {
+                "x": 4.0,
+                "y": 4.0
+            },
+            "mDepth": 1,
+            "mSortingOrder": 0,
+            "mSortingLayerName": "",
+            "mClipOffset": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "useSortingOrder": false
+        }
+    }"Scroll View": {
+        "Scroll View": {
+            "leftAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 0.0,
+                "absolute": 0
+            },
+            "rightAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 1.0,
+                "absolute": 0
+            },
+            "bottomAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 0.0,
+                "absolute": 0
+            },
+            "topAnchor": {
+                "target": {
+                    "instanceID": 0
+                },
+                "relative": 1.0,
+                "absolute": 0
+            },
+            "updateAnchors": 1,
+            "showInPanelTool": true,
+            "generateNormals": false,
+            "generateUV2": false,
+            "shadowMode": 0,
+            "widgetsAreStatic": false,
+            "cullWhileDragging": true,
+            "alwaysOnScreen": false,
+            "anchorOffset": false,
+            "softBorderPadding": true,
+            "renderQueue": 0,
+            "startingRenderQueue": 3001,
+            "mClipTexture": {
+                "instanceID": 0
+            },
+            "mAlpha": 1.0,
+            "mClipping": 3,
+            "mClipRange": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 300.0,
+                "w": 200.0
+            },
+            "mClipSoftness": {
+                "x": 4.0,
+                "y": 4.0
+            },
+            "mDepth": 2,
+            "mSortingOrder": 0,
+            "mSortingLayerName": "",
+            "mClipOffset": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "useSortingOrder": false
+        }
+    }"Scroll View": {
+        "Scroll View": {
+            "movement": 0,
+            "dragEffect": 2,
+            "restrictWithinPanel": true,
+            "constrainOnDrag": false,
+            "disableDragIfFits": false,
+            "smoothDragStart": true,
+            "iOSDragEmulation": true,
+            "scrollWheelFactor": 0.25,
+            "momentumAmount": 35.0,
+            "dampenStrength": 9.0,
+            "horizontalScrollBar": {
+                "instanceID": 0
+            },
+            "verticalScrollBar": {
+                "instanceID": 0
+            },
+            "showScrollBars": 1,
+            "customMovement": {
+                "x": 1.0,
+                "y": 0.0
+            },
+            "contentPivot": 0,
+            "scale": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+            },
+            "relativePositionOnReset": {
+                "x": 0.0,
+                "y": 0.0
+            },
+            "centerOnChild": {
+                "instanceID": 0
+            }
+        }
+    }
+}

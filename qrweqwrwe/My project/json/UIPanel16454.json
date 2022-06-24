@@ -1,0 +1,65 @@
+{
+    "leftAnchor": {
+        "target": {
+            "instanceID": 0
+        },
+        "relative": 0.0,
+        "absolute": 0
+    },
+    "rightAnchor": {
+        "target": {
+            "instanceID": 0
+        },
+        "relative": 1.0,
+        "absolute": 0
+    },
+    "bottomAnchor": {
+        "target": {
+            "instanceID": 0
+        },
+        "relative": 0.0,
+        "absolute": 0
+    },
+    "topAnchor": {
+        "target": {
+            "instanceID": 0
+        },
+        "relative": 1.0,
+        "absolute": 0
+    },
+    "updateAnchors": 1,
+    "showInPanelTool": true,
+    "generateNormals": false,
+    "generateUV2": false,
+    "shadowMode": 0,
+    "widgetsAreStatic": false,
+    "cullWhileDragging": true,
+    "alwaysOnScreen": false,
+    "anchorOffset": false,
+    "softBorderPadding": true,
+    "renderQueue": 0,
+    "startingRenderQueue": 3001,
+    "mClipTexture": {
+        "instanceID": 0
+    },
+    "mAlpha": 1.0,
+    "mClipping": 0,
+    "mClipRange": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 300.0,
+        "w": 200.0
+    },
+    "mClipSoftness": {
+        "x": 4.0,
+        "y": 4.0
+    },
+    "mDepth": 1,
+    "mSortingOrder": 0,
+    "mSortingLayerName": "",
+    "mClipOffset": {
+        "x": 0.0,
+        "y": 0.0
+    },
+    "useSortingOrder": false
+}

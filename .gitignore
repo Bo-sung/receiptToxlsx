@@ -78,3 +78,17 @@ crashlytics-build.properties
 # End of https://www.toptal.com/developers/gitignore/api/unity
 teadst/Sorce/obj/
 teadst/Sorce/bin/
+My project/Library/Artifacts/
+qrweqwrwe/My project/Library/Artifacts/
+qrweqwrwe/My project/Library/il2cpp_android_arm64-v8a/il2cpp_cache/8674C9D0547A4ABA3EF209C25C15DAD1.o
+qrweqwrwe/My project/Library/il2cpp_android_arm64-v8a/il2cpp_cache/08F3BD77E6C045AE804506B08BD34328.o
+qrweqwrwe/My project/Library/il2cpp_android_arm64-v8a/
+qrweqwrwe/My project/Library/il2cpp_android_armeabi-v7a/
+qrweqwrwe/My project/Library/PackageCache/com.unity.collab-proxy@1.2.16/
+qrweqwrwe/My project/Library/PackageCache/
+qrweqwrwe/My project/Library/ShaderCache/
+qrweqwrwe/My project/Library/StateCache/
+*.cache
+receiptToxlsx/Library/Artifacts/
+receiptToxlsx/Library/PackageCache/
+receiptToxlsx/Library/
